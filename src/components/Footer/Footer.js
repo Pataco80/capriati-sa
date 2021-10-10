@@ -12,7 +12,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { FooterMenu } from '@components'
 
 // Import StyledElements for basic styles
-import { Section, SectionCenter } from '@styledElements/SectionStyled'
+import { Section, SectionCenter } from '../StyledElements/SectionStyled'
 
 // Import styles from styled-components file
 import { setColor } from '@helpers'
