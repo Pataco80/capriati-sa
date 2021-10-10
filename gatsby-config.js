@@ -1,3 +1,5 @@
+const path = require('path')
+
 // Initialize dotenv
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`, // or '.env'
@@ -74,13 +76,16 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@components': 'src/components',
-          '@styledElements': 'src/components/styledElements',
-          '@helpers': 'src/theme/helpers',
-          '@hooks': 'src/hooks',
-          '@utils': 'src/utils',
-          '@constants': 'src/constants',
-          '@assets': 'src/assets',
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@styledElements': path.resolve(
+            __dirname,
+            'src/components/styledElements'
+          ),
+          '@helpers': path.resolve(__dirname, 'src/theme/helpers'),
+          '@hooks': path.resolve(__dirname, 'src/hooks'),
+          '@utils': path.resolve(__dirname, 'src/utils'),
+          '@constants': path.resolve(__dirname, 'src/components/constants'),
+          '@assets': path.resolve(__dirname, 'src/assets'),
         },
       },
     },

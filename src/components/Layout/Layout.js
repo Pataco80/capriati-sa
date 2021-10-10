@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 // Import Components for App
-import { NavBar } from '@components'
+import { Navbar } from '@components'
 
 // Import GlobalStyles and styles from styled-components files
 import GlobalStyles from '../../theme/globalStyles'
@@ -36,7 +36,7 @@ const Layout = (props) => {
     <>
       <GlobalStyles />
       <S.AppWrapper>
-        <NavBar toScroll={scrolled} />
+        <Navbar toScroll={scrolled} />
         <S.PageContainer className={scrolled ? `isScroll` : ``}>
           <h1>Is Layout</h1>
           {children}
