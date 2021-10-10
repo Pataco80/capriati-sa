@@ -45,7 +45,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-gatsby-cloud',
+    `gatsby-plugin-netlify`,
     'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     {

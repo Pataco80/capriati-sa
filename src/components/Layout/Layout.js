@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 // Import Components for App
-import { Navbar } from '@components'
+import { Navbar, Footer } from '@components'
 
 // Import GlobalStyles and styles from styled-components files
 import GlobalStyles from '../../theme/globalStyles'
 import * as S from './LayoutStyled'
+import { setColor } from '../../theme/helpers'
 
 // Component
 const Layout = (props) => {
@@ -29,7 +30,6 @@ const Layout = (props) => {
     }
   }, [scrolled])
 
-  console.log(scrolled)
   // Render Component
 
   return (
@@ -40,6 +40,7 @@ const Layout = (props) => {
         <S.PageContainer className={scrolled ? `isScroll` : ``}>
           <h1>Is Layout</h1>
           {children}
+          <Footer background={setColor.mainGreyL3} />
         </S.PageContainer>
       </S.AppWrapper>
     </>
