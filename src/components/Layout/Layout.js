@@ -30,7 +30,6 @@ const Layout = (props) => {
     }
   }, [scrolled])
 
-  console.log(scrolled)
   // Render Component
 
   return (
