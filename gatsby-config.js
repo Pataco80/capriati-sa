@@ -84,7 +84,7 @@ module.exports = {
           '@helpers': path.resolve(__dirname, 'src/theme/helpers'),
           '@hooks': path.resolve(__dirname, 'src/hooks'),
           '@utils': path.resolve(__dirname, 'src/utils'),
-          '@constants': path.resolve(__dirname, 'src/constants'),
+          '@constants': path.resolve(__dirname, 'src/components/constants'),
           '@assets': path.resolve(__dirname, 'src/assets'),
         },
       },
