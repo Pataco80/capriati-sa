@@ -71,6 +71,20 @@ module.exports = {
       __key: 'assets',
     },
     {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': 'src/components',
+          '@styledElements': 'src/components/styledElements',
+          '@helpers': 'src/theme/helpers',
+          '@hooks': 'src/hooks',
+          '@utils': 'src/utils',
+          '@constants': 'src/constants',
+          '@assets': 'src/assets',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: websiteConfig.siteTitle,
