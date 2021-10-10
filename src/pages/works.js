@@ -126,11 +126,11 @@ const links = [
 ]
 
 // markup
-const IndexPage = () => {
+const WorksPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>IndexPage</h1>
+      <title>Works Page</title>
+      <h1 style={headingStyles}>WorksPage</h1>
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time.{' '}
@@ -174,4 +174,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default WorksPage
