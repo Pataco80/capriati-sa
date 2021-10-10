@@ -1,4 +1,4 @@
-const links = [
+export default [
   {
     id: 1,
     label: 'Accueil',
@@ -25,5 +25,3 @@ const links = [
     path: '/contact/',
   },
 ]
-
-export default links

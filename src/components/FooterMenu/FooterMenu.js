@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { links, socialLinks } from '@constants'
+import links from '@constants/links'
+import socialLinks from '@constants/socialLinks'
 
 // Import styles from styled-components file and helpers
 import * as S from './FooterMenuStyled'

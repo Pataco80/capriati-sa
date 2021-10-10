@@ -5,7 +5,7 @@ import {
   LinkedinWithCircle,
 } from '@styled-icons/entypo-social'
 
-const socialLinks = [
+export default [
   {
     icon: <FacebookWithCircle />,
     url: 'www.facebook.com',
@@ -19,5 +19,3 @@ const socialLinks = [
     url: 'www.linkedin.com',
   },
 ]
-
-export default socialLinks

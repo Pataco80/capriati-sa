@@ -6,7 +6,7 @@ import { setColor, media } from '@helpers'
 // Export Styles for the component
 
 export const FooterWrapper = styled.footer`
-  background-color: ${setColor.primaryCollor};
+  background-color: ${setColor.primaryColor};
   padding-bottom: ${(props) =>
     props.paddingBottom ? props.paddingBottom : `3rem`};
 
