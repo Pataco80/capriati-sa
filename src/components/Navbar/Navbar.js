@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 // Import constans and datas
-import links from '../../constants/links'
-import socialLinks from '../../constants/socialLinks'
+import links from './links'
+import socialLinks from './socialLinks'
 import logo from '../../assets/images/logos/logoCapriatiTopbar.png'
 
 // Import Components for App
