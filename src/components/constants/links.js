@@ -1,4 +1,4 @@
-export default [
+const links = [
   {
     id: 1,
     label: 'Accueil',
@@ -25,3 +25,5 @@ export default [
     path: '/contact/',
   },
 ]
+
+export default links

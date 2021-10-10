@@ -1,9 +1,11 @@
 import React from 'react'
-import FacebookWithCircle from '@styled-icons/entypo-social/FacebookWithCircle'
-import TwitterWithCircle from '@styled-icons/entypo-social/TwitterWithCircle'
-import LinkedinWithCircle from '@styled-icons/entypo-social/LinkedinWithCircle'
+import {
+  FacebookWithCircle,
+  TwitterWithCircle,
+  LinkedinWithCircle,
+} from '@styled-icons/entypo-social'
 
-export default [
+const socialLinks = [
   {
     icon: <FacebookWithCircle />,
     url: 'www.facebook.com',
@@ -17,3 +19,5 @@ export default [
     url: 'www.linkedin.com',
   },
 ]
+
+export default socialLinks
