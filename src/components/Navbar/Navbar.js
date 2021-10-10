@@ -8,10 +8,10 @@ import logo from '../../assets/images/logos/logoCapriatiTopbar.png'
 import { MenuAlt3 } from '@styled-icons/heroicons-outline/MenuAlt3'
 
 // Import styled-components, styledElements and helpers
-import * as S from './NavbarStyled'
+import * as S from './NavBarStyled'
 
 // Component
-const Navbar = ({ toScroll }) => {
+const NavBar = ({ toScroll }) => {
   // Component Variables
   const [isOpen, setNav] = useState(false)
 
@@ -59,4 +59,4 @@ const Navbar = ({ toScroll }) => {
   )
 }
 
-export default Navbar
+export default NavBar
