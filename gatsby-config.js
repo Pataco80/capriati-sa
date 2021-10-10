@@ -18,12 +18,20 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+      __key: 'pages',
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: './src/images/',
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
-      __key: 'images',
+      __key: 'assets',
     },
   ],
 }
