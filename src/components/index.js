@@ -17,6 +17,7 @@ export { default as Profile } from './Profile/Profile'
 export { default as TeamCadresList } from './TeamCadresList/TeamCadresList'
 export { default as TeamCadre } from './TeamCadre/TeamCadre'
 export { default as TeamTable } from './TeamTable/TeamTable'
+export { default as ParallaxImg } from './ParallaxImg/ParallaxImg'
 
 // Components for pages
 export { default as Layout } from './Layout/Layout'
