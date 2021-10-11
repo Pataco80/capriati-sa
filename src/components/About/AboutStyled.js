@@ -78,7 +78,7 @@ export const AboutAuthorContainer = styled.div`
 
   ${media.greaterThan('tablet')`
         ${setFlex({ flDir: 'row' })};
-    max-width: 18rem;
+    max-width: 22rem;
     padding-left:2rem;
 
   `}
@@ -91,7 +91,7 @@ export const AboutAuthorContainer = styled.div`
 export const AuthorImgContainer = styled.div`
   ${setFlex({ flDir: 'column' })};
   width: 100%;
-  max-width: 250px;
+  max-width: 350px;
   padding: 2rem 0 1rem 0;
   text-align: center;
 

@@ -10,10 +10,15 @@ export const ProfileWrapper = styled.div`
   text-shadow: 2px 2px 2px ${setColor.mainGreyL1};
 `
 
-export const ProfileName = styled.h3`
+export const ProfileName = styled(Title)`
   text-align: center;
-  display: block;
-  padding-bottom: 1.5rem;
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 0 !important;
+  }
+  padding: 1.5rem 0 0;
 `
 
 export const ProfileJob = styled(Title)`
@@ -22,8 +27,9 @@ export const ProfileJob = styled(Title)`
   padding-bottom: 1.5rem;
 `
 export const BossPosition = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-shadow: none;
+  font-style: bold;
 `
 // Export Styles for the component
 export const ImgContainer = styled.div`

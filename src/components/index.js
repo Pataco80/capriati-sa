@@ -12,9 +12,13 @@ export { default as BannerHome } from './BannerHome/BannerHome'
 export { default as Hero } from './Hero/Hero'
 export { default as VideoBcg } from './VideoBcg/VideoBcg'
 export { default as Profile } from './Profile/Profile'
+export { default as TeamCadresList } from './TeamCadresList/TeamCadresList'
+export { default as TeamCadre } from './TeamCadre/TeamCadre'
+export { default as TeamTable } from './TeamTable/TeamTable'
 
 // Components for pages
 export { default as Layout } from './Layout/Layout'
 export { default as About } from './About/About'
 export { default as Seo } from './Seo'
 export { default as ContactForm } from './ContactForm/ContactForm'
+export { default as Team } from './Team/Team'
