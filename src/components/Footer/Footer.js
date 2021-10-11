@@ -35,6 +35,7 @@ const Footer = ({ background }) => {
         <StaticImage
           src='../../assets/images/footerBande.png'
           alt='Banière colorée'
+          layout='fullWidth'
         />
       </Section>
       <SectionCenter background='transparent'>

@@ -7,12 +7,11 @@ import { Navbar, Footer, BtnBar } from '@components'
 // Import GlobalStyles and styles from styled-components files
 import GlobalStyles from '../../theme/globalStyles'
 import * as S from './LayoutStyled'
-import { setColor } from '../../theme/helpers'
 
 // Component
 const Layout = (props) => {
   // Component Variables
-  const { children } = props
+  const { children, background } = props
   // Component Variables
   const [scrolled, setScrolled] = useState(false)
 
@@ -41,7 +40,7 @@ const Layout = (props) => {
           {children}
         </S.PageContainer>
         <BtnBar />
-        <Footer background={setColor.mainGreyL3} />
+        <Footer background={background} />
       </S.AppWrapper>
     </>
   )
