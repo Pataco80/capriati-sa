@@ -1,59 +1,86 @@
-import * as React from 'react'
-import { Layout } from '@components'
-import { Link } from 'gatsby'
+import React from 'react'
 
-// styles
-const pageStyles = {
-  color: '#232129',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-  display: 'block',
-  width: '100%',
-  padding: '3rem',
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+// Import Components for App
+import { Layout, Hero } from '@components'
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-}
+// Import components from Gatsby and plugins Gatsby
+import { graphql } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
 
-// markup
-const NotFoundPage = () => {
+// Import styled-components, styledElements and helpers
+import styled from 'styled-components'
+import { GatsbyButtonLink } from '../components/StyledElements/ButtonsStyled'
+import { setFlex, setColor, media, setShadow } from '@helpers'
+
+// GraphQl Queries
+export const query = graphql`
+  {
+    heroBcg: file(
+      relativePath: { eq: "images/banners/contact-page-banner.jpg" }
+    ) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+      name
+    }
+  }
+`
+
+// Component
+const NotFoundPage = ({ data }) => {
+  const bcgImage = getImage(data.heroBcg)
+  const altImg = data.heroBcg.name
+  console.log(bcgImage)
+  // Render Component
   return (
     <Layout>
-      <div style={pageStyles}>
-        <title>Not found</title>
-        <h1 style={headingStyles}>Not Found Page</h1>
-        <p style={paragraphStyles}>
-          Sorry{' '}
-          <span role='img' aria-label='Pensive emoji'>
-            😔
-          </span>{' '}
-          we couldn’t find what you were looking for.
-          <br />
-          {process.env.NODE_ENV === 'development' ? (
-            <>
-              <br />
-              Try creating a page in <code style={codeStyles}>src/pages/</code>.
-              <br />
-            </>
-          ) : null}
-          <br />
-          <Link to='/'>Go home</Link>.
-        </p>
-      </div>
+      <ErrorHero
+        error
+        title="Page d'erreur 404"
+        bcgImage={bcgImage}
+        altBcgImage={altImg}
+      >
+        <Text className='h5'>
+          La page que vous demandez n'éxiste pas, ou l'url que vous avez taper
+          n'est pas valide
+        </Text>
+        <CallActionBtn primary to='/' title="Retour à la page d'Accueil">
+          Retour à la page d'accueil
+        </CallActionBtn>
+      </ErrorHero>
     </Layout>
   )
 }
+
+// Styles from styled-components
+const ErrorHero = styled(Hero)`
+  ${setFlex({ flDir: 'column', x: 'space-around' })};
+  background-color: rgba(0, 0, 0, 0.5);
+`
+
+const Text = styled.p`
+  margin: 0 0 3rem;
+  text-align: center;
+  text-shadow: 3px 3px 3px ${setColor.mainGreyD2};
+
+  ${media.greaterThan('tablet')`
+    margin: 0 0 3rem !important;
+  `}
+
+  ${media.greaterThan('desktop')`
+    font-size: 2.197rem;
+    line-height: calc(2.197rem + 1vw);
+    margin: calc(1.5rem + 1vw) 0;
+  `}
+`
+
+const CallActionBtn = styled(GatsbyButtonLink)`
+  ${setShadow('light')};
+  text-align: center;
+
+  &:hover {
+    ${setShadow('dark')};
+  }
+`
 
 export default NotFoundPage
