@@ -18,13 +18,19 @@ export const ProfileName = styled(Title)`
   h6 {
     padding: 0 !important;
   }
-  padding: 1.5rem 0 0;
+  margin: 1.5rem 0;
 `
 
 export const ProfileJob = styled(Title)`
   text-align: center;
   text-shadow: none;
-  padding-bottom: 1.5rem;
+  margin-bottom: 0;
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding-top: 0 !important;
+  }
 `
 export const BossPosition = styled.p`
   font-size: 1.5rem;
@@ -38,6 +44,7 @@ export const ImgContainer = styled.div`
   ${setRadius({ allPc: 50 })};
   box-shadow: ${setShadow('light')};
   overflow: hidden;
+  margin-bottom: 1rem;
 
   img {
     ${setRadius({ allPc: 50 })};

@@ -6,7 +6,7 @@ import { setFlex, setColor, media } from '@helpers'
 // Export Styles for the component
 export const CadreItemWrapper = styled.div`
   ${setFlex({ flDir: 'column', y: 'center' })};
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   width: 100%;
   max-width: 25rem;
   text-align: center;
@@ -20,7 +20,6 @@ export const CadreItemWrapper = styled.div`
   ${media.greaterThan('desktop')`
     width: 30%;
     padding: 0 1.5rem;
-    margin-bottom:3rem;
   `}
 `
 
