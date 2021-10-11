@@ -5,8 +5,10 @@ import { Link } from 'gatsby'
 // styles
 const pageStyles = {
   color: '#232129',
-  padding: '96px',
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
+  display: 'block',
+  width: '100%',
+  padding: '3rem',
 }
 const headingStyles = {
   marginTop: 0,
@@ -29,9 +31,9 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <Layout>
-      <main style={pageStyles}>
+      <div style={pageStyles}>
         <title>Not found</title>
-        <h1 style={headingStyles}>NotFoundPage</h1>
+        <h1 style={headingStyles}>Not Found Page</h1>
         <p style={paragraphStyles}>
           Sorry{' '}
           <span role='img' aria-label='Pensive emoji'>
@@ -49,7 +51,7 @@ const NotFoundPage = () => {
           <br />
           <Link to='/'>Go home</Link>.
         </p>
-      </main>
+      </div>
     </Layout>
   )
 }

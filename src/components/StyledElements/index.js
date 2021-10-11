@@ -1,4 +1,4 @@
-export {
+/* export {
   Section,
   SectionContent,
   SectionCenter,
@@ -13,3 +13,4 @@ export {
 } from "./BannerStyled"
 
 export { BannerStyled, BannerStyledCenter } from "./BannerStyled"
+ */

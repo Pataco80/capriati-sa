@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 // Import Components for App
-import { Navbar, Footer } from '@components'
+import { Navbar, Footer, BtnBar } from '@components'
 
 // Import GlobalStyles and styles from styled-components files
 import GlobalStyles from '../../theme/globalStyles'
@@ -41,6 +41,7 @@ const Layout = (props) => {
           <h1>Is Layout</h1>
           {children}
           <Footer background={setColor.mainGreyL3} />
+          <BtnBar />
         </S.PageContainer>
       </S.AppWrapper>
     </>
