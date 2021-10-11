@@ -32,4 +32,8 @@ export const ImgContainer = styled.div`
   ${setRadius({ allPc: 50 })};
   box-shadow: ${setShadow('light')};
   overflow: hidden;
+
+  img {
+    ${setRadius({ allPc: 50 })};
+  }
 `

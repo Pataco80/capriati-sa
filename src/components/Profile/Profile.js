@@ -6,18 +6,7 @@ import * as S from './ProfileStyled'
 // Component
 const Profile = (props) => {
   // Component Variables
-  const {
-    children,
-    titleName,
-    titleJob,
-    tagName,
-    tagJob,
-    bossPosition,
-    nameNotPadding,
-    notPadding,
-    tagClassName,
-    className,
-  } = props
+  const { children, titleName, titleJob, tagName, tagJob, bossPosition } = props
   // Render Component
   return (
     <S.ProfileWrapper>
