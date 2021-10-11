@@ -4,7 +4,7 @@ import * as React from 'react'
 import useSiteMetadata from '@hooks/useSiteMetadata'
 
 // Import Components for App
-import { Layout, Seo, Hero, About, History, Team } from '@components'
+import { Layout, Seo, Hero, About, History, Team, Parteners } from '@components'
 // Import components from Gatsby and plugins Gatsby
 import { getImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
@@ -53,6 +53,7 @@ const AboutPage = ({ data }) => {
       <About />
       <History />
       <Team />
+      <Parteners />
     </Layout>
   )
 }
