@@ -18,7 +18,7 @@ export const query = graphql`
       relativePath: { eq: "images/banners/contact-page-banner.jpg" }
     ) {
       childImageSharp {
-        gatsbyImageData(formats: WEBP, layout: FULL_WIDTH, placeholder: BLURRED)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       name
     }

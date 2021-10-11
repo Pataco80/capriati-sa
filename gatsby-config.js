@@ -44,18 +44,14 @@ module.exports = {
     formSpree: websiteConfig.formSpree,
   },
   plugins: [
-    'gatsby-plugin-styled-components',
-    `gatsby-plugin-netlify`,
-    'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        icon: 'src/assets/images/icons/favicon.png',
+        displayName: true,
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-netlify`,
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -89,6 +85,17 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

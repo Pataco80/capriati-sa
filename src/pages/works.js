@@ -21,7 +21,7 @@ export const query = graphql`
   {
     heroBcg: file(relativePath: { eq: "images/banners/work-page-banner.jpg" }) {
       childImageSharp {
-        gatsbyImageData(formats: WEBP, layout: FULL_WIDTH, placeholder: BLURRED)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       name
     }
