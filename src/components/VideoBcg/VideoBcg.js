@@ -16,7 +16,7 @@ const getImage = graphql`
   {
     posterImg: file(relativePath: { eq: "images/painting_poster_hero.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, formats: WEBP, placeholder: BLURRED)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
@@ -26,7 +26,6 @@ const Videobcg = ({ children }) => {
   // Component Variables
   const data = useStaticQuery(getImage)
   const poster = data.posterImg.gatsbyImageData
-  console.log(poster)
   // Render Component
   return (
     <S.VideoWrapper>

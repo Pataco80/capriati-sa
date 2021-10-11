@@ -85,6 +85,60 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_API_USER_KEY, // may instead specify via env, see below
+        concurrency: 5, // default, see using markdown and attachments for more information
+        tables: [
+          {
+            baseId: process.env.AIRTABLE_TEAM_DATABASE_ID,
+            tableName: `team`,
+            mapping: { image: `fileNode` }, // optional, e.g. "text/markdown", "fileNode"
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Services`,
+            mapping: {
+              serviceIcon: `fileNode`,
+              featuredServiceImg: `fileNode`,
+              serviceGallery: `fileNode`,
+              serviceImg1: `fileNode`,
+              serviceImg2: `fileNode`,
+              serviceImg3: `fileNode`,
+            }, // optional, e.g. "text/markdown", "fileNode"
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Gallery`,
+            mapping: {
+              galleryImage: `fileNode`,
+            }, // optional, e.g. "text/markdown", "fileNode"
+            tableLinks: [`galleryClients`],
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Clients`,
+            tableLinks: [`clientGallery`, `clientServices`],
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `References`,
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Historique`,
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Partenaires`,
+            mapping: {
+              logo: `fileNode`,
+            }, // optional, e.g. "text/markdown", "fileNode"
+          },
+        ],
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
