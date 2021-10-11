@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Layout } from '@components'
+import { Title } from '../components'
 
 // styles
 const pageStyles = {
@@ -132,6 +133,7 @@ const IndexPage = () => {
       <div style={pageStyles}>
         <title>Home Page</title>
         <h1 style={headingStyles}>Index Page</h1>
+        <Title tag='h1' title='Index Page' notShadow />
         <p style={paragraphStyles}>
           Edit <code style={codeStyles}>src/pages/index.js</code> to see this
           page update in real-time.{' '}

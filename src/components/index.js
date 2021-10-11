@@ -5,6 +5,7 @@ export { default as FooterMenu } from './FooterMenu/FooterMenu'
 export { default as BtnBar } from './BtnBar/BtnBar'
 export { default as ContactMenu } from './ContactMenu/ContactMenu'
 export { default as ToTopBtn } from './ToTopBtn/ToTopBtn'
+export { default as Title } from './Title/Title'
 
 // Components for pages
 export { default as Layout } from './Layout/Layout'
