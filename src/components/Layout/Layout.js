@@ -38,11 +38,10 @@ const Layout = (props) => {
       <S.AppWrapper>
         <Navbar toScroll={scrolled} />
         <S.PageContainer className={scrolled ? `isScroll` : ``}>
-          <h1>Is Layout</h1>
           {children}
-          <Footer background={setColor.mainGreyL3} />
-          <BtnBar />
         </S.PageContainer>
+        <BtnBar />
+        <Footer background={setColor.mainGreyL3} />
       </S.AppWrapper>
     </>
   )
