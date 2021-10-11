@@ -3,7 +3,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 // Import Components for App
-import { Layout, Hero } from '@components'
+import { Layout, Seo, Hero } from '@components'
 
 // markup
 const WorksPage = ({ data }) => {
@@ -12,6 +12,14 @@ const WorksPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo
+        pathname='/works/'
+        title='Nos Travaux'
+        description='Nos travaux éféctués au fil des années'
+        keywords='nos travaux, nos références, gallerie'
+        image='work'
+        shareTitle='Nos réalisations... pour vos inspirations.'
+      />
       <Hero title='Nos Travaux' imgPath={bcgImage} altBcgImage={altImg} />
     </Layout>
   )

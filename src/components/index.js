@@ -11,6 +11,7 @@ export { default as Banner } from './Banner/Banner'
 export { default as BannerHome } from './BannerHome/BannerHome'
 export { default as Hero } from './Hero/Hero'
 export { default as VideoBcg } from './VideoBcg/VideoBcg'
+export { default as Seo } from './Seo'
 
 // Components for pages
 export { default as Layout } from './Layout/Layout'

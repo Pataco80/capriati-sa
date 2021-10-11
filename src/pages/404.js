@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Import Components for App
-import { Layout, Hero } from '@components'
+import { Layout, Seo, Hero } from '@components'
 
 // Import components from Gatsby and plugins Gatsby
 import { graphql } from 'gatsby'
@@ -34,6 +34,7 @@ const NotFoundPage = ({ data }) => {
   // Render Component
   return (
     <Layout>
+      <Seo title='404' />
       <ErrorHero
         error
         title="Page d'erreur 404"
