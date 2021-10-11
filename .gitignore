@@ -4,3 +4,5 @@ public
 .vscode/
 .env.*
 .DS_Store
+src/contact.js
+.variables
