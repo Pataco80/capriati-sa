@@ -4,7 +4,7 @@ import * as React from 'react'
 import useSiteMetadata from '@hooks/useSiteMetadata'
 
 // Import Components for App
-import { Layout, Seo, Hero } from '@components'
+import { Layout, Seo, Hero, About } from '@components'
 // Import components from Gatsby and plugins Gatsby
 import { getImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
@@ -31,7 +31,6 @@ const AboutPage = ({ data }) => {
   const bcgImage = getImage(data.heroBcg)
   const altImg = data.heroBcg.name
 
-  console.log(bcgImage)
   return (
     <Layout background={`${setColor.mainWhite}`}>
       <Seo
@@ -51,6 +50,7 @@ const AboutPage = ({ data }) => {
         shareTitle='Notre entreprise'
       />
       <Hero title='A Propos de nous' imgPath={bcgImage} altBcgImage={altImg} />
+      <About />
     </Layout>
   )
 }

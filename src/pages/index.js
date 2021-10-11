@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Layout, Seo, Hero } from '@components'
+import { Layout, Seo, Hero, About } from '@components'
 
 // Import styled-components, styledElements and helpers
 import { setColor } from '@helpers'
@@ -13,6 +13,7 @@ const IndexPage = () => {
         shareTitle='Bienvenue chez nous.'
       />
       <Hero home title='Home Page' />
+      <About home />
     </Layout>
   )
 }
