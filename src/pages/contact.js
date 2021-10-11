@@ -70,6 +70,7 @@ const ContactPage = ({ data }) => {
         shareTitle='Contactez-nous, nous sommes à votre entière disposition.'
       />
       <Hero title='Nous Contacter' imgPath={bcgImage} altBcgImage={altImg} />
+      <ContactForm />
       <ContactSection background={`${setColor.mainGreyL3}`}>
         <Title tag='h3' title='Nos Coordonées' />
         <ContactSectionContent>
