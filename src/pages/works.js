@@ -3,7 +3,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 // Import Components for App
-import { Layout, Seo, Hero, References } from '@components'
+import { Layout, Seo, Hero, References, Works } from '@components'
 
 // markup
 const WorksPage = ({ data }) => {
@@ -21,6 +21,7 @@ const WorksPage = ({ data }) => {
         shareTitle='Nos réalisations... pour vos inspirations.'
       />
       <Hero title='Nos Travaux' imgPath={bcgImage} altBcgImage={altImg} />
+      <Works />
       <References />
     </Layout>
   )
