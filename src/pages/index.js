@@ -1,13 +1,12 @@
 import * as React from 'react'
-import { Layout, Seo, Hero, About } from '@components'
+import { Layout, Seo, Hero, About, Services, Testimonials } from '@components'
 
 // Import styled-components, styledElements and helpers
 import { setColor } from '@helpers'
-import { Testimonials } from '../components'
 
 const IndexPage = () => {
   return (
-    <Layout home background={`${setColor.mainGreyL3}`}>
+    <Layout home background={`${setColor.mainWhite}`}>
       <Seo
         title='Accueil'
         keywords="Page d'Accueil, A propos de nous, Nos Services"
@@ -15,6 +14,7 @@ const IndexPage = () => {
       />
       <Hero home title='Home Page' />
       <About home />
+      <Services home background={`${setColor.mainGreyL3}`} />
       <Testimonials />
     </Layout>
   )

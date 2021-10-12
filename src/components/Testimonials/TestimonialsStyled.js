@@ -11,19 +11,20 @@ import {
   setColor,
   setTransition,
   setRadius,
+  background,
 } from '@helpers'
 
 export const TestimonialsWrapper = styled(Section)`
   ${setFlex({ flDir: 'column', wrap: 'wrap' })};
   flex-direction: column;
-  background-color: ${setColor.mainGreyL3};
+  background-color: ${(props) => props.background || `${setColor.white}`};
   position: relative;
   width: 100vw;
 `
 export const CenteredContainer = styled(SectionContent)`
   ${layout({ mW: 50, wTh: '80%' })};
   ${setFlex({ flDir: 'row', wrap: 'nowrap' })};
-  height: 35rem;
+  height: 42rem;
   max-width: 800px;
   text-align: center;
   position: relative;
@@ -45,7 +46,7 @@ export const Article = styled.article`
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 4rem;
+  padding: 0 5rem;
   overflow: hidden;
   opacity: 0;
   transform: translateX(0);
@@ -73,6 +74,7 @@ export const City = styled.p`
 
 export const ArticleText = styled.div`
   position: relative;
+  margin-bottom: 3rem;
 `
 
 export const Description = styled.p`
@@ -87,27 +89,37 @@ export const PrevBtn = styled(Button)`
   ${setRadius({ tl: 8, tr: 0, br: 0, bl: 8 })};
   position: absolute;
   left: 0;
+  top: 35%;
   cursor: pointer;
   z-index: 10;
+
+  ${media.greaterThan('smTablet')`
+      top: auto;
+  `}
 `
 export const NextBtn = styled(Button)`
   ${setRadius({ tl: 0, tr: 8, br: 8, bl: 0 })};
   position: absolute;
+  top: 35%;
   right: 0;
   cursor: pointer;
   z-index: 10;
+
+  ${media.greaterThan('smTablet')`
+      top: auto;
+  `}
 `
 
 export const LeftQuote = styled(DoubleQuotesL)`
   color: ${setColor.primaryColor};
   position: absolute;
-  left: 0;
+  left: -24px;
   bottom: -32px;
 `
 
 export const RightQuote = styled(DoubleQuotesR)`
   color: ${setColor.primaryColor};
   position: absolute;
-  right: 0;
+  right: -24px;
   top: -32px;
 `

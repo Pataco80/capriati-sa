@@ -16,12 +16,12 @@ import { setColor } from '@helpers'
 // Component
 const About = (props) => {
   // Component Variables
-  const { home } = props
+  const { home, background } = props
   const { bossName, bossPosition } = useSiteMetadata()
 
   // Render Component
   return (
-    <S.AboutWrapper>
+    <S.AboutWrapper background={background}>
       {home ? <Title tag='h2' title='A Propos de Nous' /> : ''}
       <S.AboutContent>
         <S.AboutArticle>

@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 // Import StyledElements for basic styles
-import { Section, SectionContentCenter } from '@styledElements/SectionStyled'
-import { GatsbyButtonLink } from '@styledElements/ButtonsStyled'
+import { Section, SectionContentCenter } from '../StyledElements/SectionStyled'
+import { GatsbyButtonLink } from '../StyledElements/ButtonsStyled'
 
 // Import helpers
 import {
@@ -21,6 +21,7 @@ import {
 export const ServicesWrapper = styled(Section)`
   ${setFlex({ flDir: 'column' })};
   padding: 3rem 1rem;
+  background-color: ${(props) => props.background || `${setColor.white}`};
 `
 
 export const ServicesContent = styled(SectionContentCenter)`

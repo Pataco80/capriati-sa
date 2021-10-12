@@ -19,7 +19,7 @@ const ArticleCSS = css`
 // Export Styles for the component
 export const AboutWrapper = styled(Section)`
   ${setFlex({ flDir: 'column' })};
-  background: ${setColor.mainWhite};
+  background-color: ${(props) => props.background || `${setColor.white}`};
 `
 
 export const AboutContent = styled(SectionContent)`

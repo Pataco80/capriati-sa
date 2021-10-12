@@ -1,29 +1,29 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // Import components from Gatsby and plugins Gatsby
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 // Import Components for App
-import { BcgImage } from "@components"
+import { BcgImage } from '@components'
 
 // Import StyledElements for basic styles
-import { BannerStyled } from "@styledElements/BannerStyled"
-import { SectionContentCenter } from "@styledElements/SectionStyled"
+import { BannerStyled } from '../StyledElements/BannerStyled'
+import { SectionContentCenter } from '../StyledElements/SectionStyled'
 
 // Import helpers
-import { setFlex, setColor, setRadius, setShadow, media } from "@helpers"
+import { setFlex, setColor, setRadius, setShadow, media } from '@helpers'
 
 // Export Styles for the component
 export const ServiceHeader = styled.header`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   position: relative;
   width: 100%;
   min-height: 32rem;
 `
 
 export const ServiceBanner = styled.div`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   width: 100%;
   align-content: flex-end;
   align-self: flex-end;
@@ -32,25 +32,25 @@ export const ServiceBanner = styled.div`
     margin: 0 0 0.5rem 0;
     align-self: flex-end;
 
-    ${media.lessThan("smTablet")`
+    ${media.lessThan('smTablet')`
         font-size: larger;
 
   `}
   }
 
-  ${media.greaterThan("smTablet")`
-    ${setFlex({ x: "flex-end" })};
+  ${media.greaterThan('smTablet')`
+    ${setFlex({ x: 'flex-end' })};
     align-self: flex-end;
   `}
 `
 
 export const ServiceSmallBanner = styled.div`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   width: 100%;
 `
 
 export const BannerContent = styled(BannerStyled)`
-  ${setFlex({ x: "flex-end" })};
+  ${setFlex({ x: 'flex-end' })};
   background-color: rgba(255, 255, 255, 0.8);
   width: 80%;
   max-width: 600px;
@@ -59,7 +59,7 @@ export const BannerContent = styled(BannerStyled)`
   align-content: flex-end;
   padding: 1rem;
 
-  ${media.greaterThan("smTablet")`
+  ${media.greaterThan('smTablet')`
     padding: 2rem;
   `}
 `
@@ -79,12 +79,12 @@ export const IconContainer = styled.div`
   width: 50px;
   height: 50px;
 
-  ${media.greaterThan("smTablet")`
+  ${media.greaterThan('smTablet')`
     width: 80px;
     height: 80px;
   `}
 
-  ${media.greaterThan("tablet")`
+  ${media.greaterThan('tablet')`
     width: 100px;
     height: 100px;
   `}
@@ -100,7 +100,7 @@ export const ServiceBody = styled(SectionContentCenter)`
 `
 
 export const ServiceWrapper = styled.article`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   flex-flow: wrap;
   padding: 1rem;
   width: 100%;
@@ -110,11 +110,11 @@ export const ServiceCardItem = styled.article`
   padding: 2rem;
 
   ${ServiceBanner} {
-    ${setFlex({ flDir: "column" })};
+    ${setFlex({ flDir: 'column' })};
   }
 `
 export const ServiceCardWrapper = styled(Link)`
-  ${setFlex({ flDir: "column", x: "flex-start", y: "flex-start" })};
+  ${setFlex({ flDir: 'column', x: 'flex-start', y: 'flex-start' })};
   flex-flow: wrap;
   align-content: flex-start;
   width: 100%;
@@ -124,27 +124,27 @@ export const ServiceCardWrapper = styled(Link)`
   margin-bottom: 4rem;
   text-decoration: none;
   ${setRadius({ allPx: 12 })};
-  box-shadow: ${setShadow("medium")};
+  box-shadow: ${setShadow('medium')};
 
   &:hover {
-    box-shadow: ${setShadow("dark")};
+    box-shadow: ${setShadow('dark')};
   }
 
-  ${media.greaterThan("tablet")`
+  ${media.greaterThan('tablet')`
     max-width: 45%;
   `}
 
-  ${media.greaterThan("desktop")`
+  ${media.greaterThan('desktop')`
     max-width: 32%;
   `}
 `
 
 export const GallerySection = styled(SectionContentCenter)`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   margin-bottom: 1rem;
 
-  ${media.greaterThan("smTablet")`
-    ${setFlex({ flDir: "row", x: "space-around" })};
+  ${media.greaterThan('smTablet')`
+    ${setFlex({ flDir: 'row', x: 'space-around' })};
     margin-bottom:2rem;
   `}
 `
