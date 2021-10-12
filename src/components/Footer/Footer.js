@@ -33,6 +33,7 @@ const Footer = ({ background }) => {
         background={background ? background : setColor.mainWhite}
       >
         <StaticImage
+          className='bcgImage'
           src='../../assets/images/footerBande.png'
           alt='Banière colorée'
           layout='fullWidth'
