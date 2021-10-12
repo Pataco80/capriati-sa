@@ -1,7 +1,6 @@
 import React from 'react'
 import SimpleReactLightbox from 'simple-react-lightbox'
 import Gallery from '../Gallery/Gallery'
-
 import * as S from './WorkItemStyled'
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -39,13 +38,13 @@ const WorkItem = ({ workData, padBtm }) => {
         </S.StackList>
       </S.WorksServices>
       <p>{clientDescription}</p>
-      <S.GallerySection>
+      <S.SectionGallery>
         <SimpleReactLightbox>
           <S.GalleryWrapper style={{ width: '100%' }}>
             <Gallery galleryDatas={clientGallery} />
           </S.GalleryWrapper>
         </SimpleReactLightbox>
-      </S.GallerySection>
+      </S.SectionGallery>
     </S.Wrapper>
   )
 }

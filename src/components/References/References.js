@@ -33,7 +33,6 @@ export const getData = graphql`
 const References = ({ background }) => {
   // Component Variables
   const data = useStaticQuery(getData)
-  console.log(data)
   const {
     allAirtable: { nodes: references },
   } = data

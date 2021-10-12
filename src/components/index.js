@@ -1,3 +1,4 @@
+export { default as Gallery } from './Gallery/Gallery'
 // Simples Components
 export { default as Navbar } from './Navbar/Navbar'
 export { default as Footer } from './Footer/Footer'
@@ -21,8 +22,6 @@ export { default as GalleryItem } from './GalleryItem/GalleryItem'
 export { default as Testimonials } from './Testimonials/Testimonials'
 export { default as ServiceItem } from './ServiceItem/ServiceItem'
 export { default as ServiceItemCard } from './ServiceItem/ServiceItemCard'
-export { default as Gallery } from './Gallery/Gallery'
-
 /* export { default as Tab } from './Tabs/Tab'
 export { default as WorksList } from './WorksList/WorksList'
 export { default as WorksTabs } from './Tabs/WorksTabs'

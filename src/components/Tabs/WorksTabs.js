@@ -2,8 +2,8 @@ import React from 'react'
 //import { Tab, WorksList, WorksGallery } from '@components'
 
 import Tab from './Tab'
-//import WorksList from '../WorksList/WorksList'
-//import WorksGallery from '../WorksGallery/WorksGallery'
+import WorksList from '../WorksList/WorksList'
+import WorksGallery from '../WorksGallery/WorksGallery'
 
 const tabContent = [
   {

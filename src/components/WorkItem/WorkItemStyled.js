@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { SRLWrapper } from 'simple-react-lightbox'
 import { setFlex, media } from '@helpers'
 import { Title } from '@components'
-import { Section } from '../styledElements/SectionStyled'
 
 export const Wrapper = styled.article`
   ${setFlex({ flDir: 'column' })};
@@ -50,7 +49,7 @@ export const StackItem = styled.li`
   padding: 0.5rem;
 `
 
-export const GallerySection = styled(Section)`
+export const SectionGallery = styled.section`
   width: 100%;
   padding: 0;
 `
