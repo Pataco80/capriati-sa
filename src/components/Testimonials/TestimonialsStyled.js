@@ -11,7 +11,6 @@ import {
   setColor,
   setTransition,
   setRadius,
-  background,
 } from '@helpers'
 
 export const TestimonialsWrapper = styled(Section)`

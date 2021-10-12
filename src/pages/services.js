@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 
 // Import Components for App
-import { Layout, Seo, Hero } from '@components'
+import { Layout, Seo, Hero, Services } from '@components'
 
 // Import styled-components, styledElements and helpers
 import { setColor } from '@helpers'
@@ -40,6 +40,7 @@ const ServicesPage = ({ data }) => {
         shareTitle='Notre expérience et qualités à votre service.'
       />
       <Hero title='Nos Services' imgPath={bcgImage} altBcgImage={altImg} />
+      <Services />
     </Layout>
   )
 }
