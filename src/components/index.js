@@ -22,6 +22,7 @@ export { default as Testimonials } from './Testimonials/Testimonials'
 export { default as ServiceItem } from './ServiceItem/ServiceItem'
 export { default as ServiceItemCard } from './ServiceItem/ServiceItemCard'
 export { default as GalleryItem } from './GalleryItem/GalleryItem'
+export { default as References } from './References/References'
 
 // Components for pages
 export { default as Layout } from './Layout/Layout'
