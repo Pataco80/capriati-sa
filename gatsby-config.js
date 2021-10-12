@@ -44,18 +44,14 @@ module.exports = {
     formSpree: websiteConfig.formSpree,
   },
   plugins: [
-    'gatsby-plugin-styled-components',
-    `gatsby-plugin-netlify`,
-    'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        icon: 'src/assets/images/icons/favicon.png',
+        displayName: true,
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-netlify`,
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -89,6 +85,71 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_API_USER_KEY, // may instead specify via env, see below
+        concurrency: 5, // default, see using markdown and attachments for more information
+        tables: [
+          {
+            baseId: process.env.AIRTABLE_TEAM_DATABASE_ID,
+            tableName: `team`,
+            mapping: { image: `fileNode` }, // optional, e.g. "text/markdown", "fileNode"
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Services`,
+            mapping: {
+              serviceIcon: `fileNode`,
+              featuredServiceImg: `fileNode`,
+              serviceGallery: `fileNode`,
+              serviceImg1: `fileNode`,
+              serviceImg2: `fileNode`,
+              serviceImg3: `fileNode`,
+            }, // optional, e.g. "text/markdown", "fileNode"
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Gallery`,
+            mapping: {
+              galleryImage: `fileNode`,
+            }, // optional, e.g. "text/markdown", "fileNode"
+            tableLinks: [`galleryClients`],
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Clients`,
+            tableLinks: [`clientGallery`, `clientServices`],
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `References`,
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Historique`,
+          },
+          {
+            baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
+            tableName: `Partenaires`,
+            mapping: {
+              logo: `fileNode`,
+            }, // optional, e.g. "text/markdown", "fileNode"
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`],
+          placeholder: `blurred`,
+        },
+      },
+    },
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -10,6 +10,11 @@ export const FooterWrapper = styled.footer`
   padding-bottom: ${(props) =>
     props.paddingBottom ? props.paddingBottom : `3rem`};
 
+  .bcgImage {
+    position: relative;
+    bottom: -5px;
+  }
+
   ${media.greaterThan('desktop')`
       padding-bottom: ${(props) =>
         props.paddingBottom ? props.paddingBottom : `1rem`}

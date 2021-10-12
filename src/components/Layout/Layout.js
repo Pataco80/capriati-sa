@@ -7,12 +7,11 @@ import { Navbar, Footer, BtnBar } from '@components'
 // Import GlobalStyles and styles from styled-components files
 import GlobalStyles from '../../theme/globalStyles'
 import * as S from './LayoutStyled'
-import { setColor } from '../../theme/helpers'
 
 // Component
 const Layout = (props) => {
   // Component Variables
-  const { children } = props
+  const { children, background } = props
   // Component Variables
   const [scrolled, setScrolled] = useState(false)
 
@@ -38,11 +37,10 @@ const Layout = (props) => {
       <S.AppWrapper>
         <Navbar toScroll={scrolled} />
         <S.PageContainer className={scrolled ? `isScroll` : ``}>
-          <h1>Is Layout</h1>
           {children}
-          <Footer background={setColor.mainGreyL3} />
-          <BtnBar />
         </S.PageContainer>
+        <BtnBar />
+        <Footer background={background} />
       </S.AppWrapper>
     </>
   )
