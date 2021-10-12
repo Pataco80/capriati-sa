@@ -3,6 +3,7 @@ import { Layout, Seo, Hero, About } from '@components'
 
 // Import styled-components, styledElements and helpers
 import { setColor } from '@helpers'
+import { Testimonials } from '../components'
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
       />
       <Hero home title='Home Page' />
       <About home />
+      <Testimonials />
     </Layout>
   )
 }

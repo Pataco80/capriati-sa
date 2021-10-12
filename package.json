@@ -19,6 +19,7 @@
     "rebuild": "gatsby clean && gatsby build"
   },
   "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "babel-plugin-styled-components": "^1.13.2",
     "dotenv": "^10.0.0",
     "gatsby": "^3.13.1",
