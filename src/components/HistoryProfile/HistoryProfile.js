@@ -14,16 +14,16 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 export const getData = graphql`
   {
     profile: allAirtable(
-      filter: { table: { eq: "team" }, data: { status: { eq: "famille" } } }
+      filter: { table: { eq: "Team" }, data: { teamStatus: { eq: "famille" } } }
       sort: { fields: id, order: DESC }
     ) {
       nodes {
         data {
-          name
-          image {
+          teamName
+          teamPhoto {
             localFiles {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED)
+                gatsbyImageData(layout: CONSTRAINED, width: 300, height: 300)
               }
             }
           }
@@ -42,19 +42,14 @@ const Historyprofile = () => {
   return (
     <S.HistoryProfileWrapper>
       {profileList.map((profile, index) => {
-        const { image, name } = profile.data
+        const { teamPhoto, teamName } = profile.data
         // Images Variables and Functions
-        const imagePath = getImage(image.localFiles[0])
+        const imagePath = getImage(teamPhoto.localFiles[0])
         // Return Profile Images
         return (
           <S.ProfileItem Key={index}>
-            <Profile tagName='h4' titleName={name}>
-              <GatsbyImage
-                image={imagePath}
-                alt={`Photo de ${name}`}
-                width={250}
-                height={250}
-              />
+            <Profile tagName='h4' titleName={teamName}>
+              <GatsbyImage image={imagePath} alt={`Photo de ${teamName}`} />
             </Profile>
           </S.ProfileItem>
         )

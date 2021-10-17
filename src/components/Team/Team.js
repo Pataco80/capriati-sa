@@ -13,17 +13,20 @@ import * as S from './TeamStyled'
 export const getData = graphql`
   {
     teamCadres: allAirtable(
-      filter: { table: { eq: "team" }, data: { status: { eq: "encadrants" } } }
-      sort: { fields: data___statusId, order: ASC }
+      filter: {
+        table: { eq: "Team" }
+        data: { teamStatus: { eq: "encadrants" } }
+      }
+      sort: { fields: data___teamStatusId, order: ASC }
     ) {
       totalCount
       nodes {
         data {
-          name
-          job
-          jobdate
-          activity
-          image {
+          teamName
+          teamJob
+          teamJobDate
+          teamActivity
+          teamPhoto {
             localFiles {
               childImageSharp {
                 gatsbyImageData(
@@ -38,22 +41,22 @@ export const getData = graphql`
       }
     }
     teamCfc: allAirtable(
-      filter: { table: { eq: "team" }, data: { status: { eq: "cfc" } } }
+      filter: { table: { eq: "Team" }, data: { teamStatus: { eq: "cfc" } } }
     ) {
       totalCount
       nodes {
         data {
-          name
+          teamName
         }
       }
     }
     teamStudents: allAirtable(
-      filter: { table: { eq: "team" }, data: { status: { eq: "student" } } }
+      filter: { table: { eq: "Team" }, data: { teamStatus: { eq: "student" } } }
     ) {
       totalCount
       nodes {
         data {
-          name
+          teamName
         }
       }
     }

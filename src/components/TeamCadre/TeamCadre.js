@@ -10,24 +10,24 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 // Component
 const TeamCadre = (props) => {
   // Component Variables
-  const { image, name, job, activity, jobdate } = props
-  const imagePath = getImage(image.localFiles[0])
+  const { teamPhoto, teamName, teamJob, teamActivity, teamJobDate } = props
+  const imagePath = getImage(teamPhoto.localFiles[0])
   // Render Component
   return (
     <S.CadreItemWrapper>
-      <Profile tagName='h4' titleName={name} tagJob='h6' titleJob={job}>
+      <Profile tagName='h4' titleName={teamName} tagJob='h6' titleJob={teamJob}>
         <GatsbyImage
           image={imagePath}
-          alt={`Photo de ${name}`}
+          alt={`Photo de ${teamName}`}
           width={250}
           height={250}
         />
       </Profile>
       <S.CadreInfo>
         <S.InfoList
-          dangerouslySetInnerHTML={{ __html: `${activity}` }}
+          dangerouslySetInnerHTML={{ __html: `${teamActivity}` }}
         ></S.InfoList>
-        <p>{jobdate}</p>
+        <p>{teamJobDate}</p>
       </S.CadreInfo>
     </S.CadreItemWrapper>
   )
