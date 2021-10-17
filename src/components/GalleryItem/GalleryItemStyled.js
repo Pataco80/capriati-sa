@@ -31,10 +31,7 @@ export const SRLLinkWrapper = styled.a`
 
 export const Image = styled(GatsbyImage)`
   ${setRadius({ allPx: 12 })};
-  img {
-    ${setRadius({ allPx: 12 })};
-  }
   &.gatsby-image-wrapper {
-    aspect-ratio: 1.3;
+    aspect-ratio: 1.4;
   }
 `

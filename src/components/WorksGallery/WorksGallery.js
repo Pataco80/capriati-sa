@@ -33,7 +33,11 @@ export const getDatas = graphql`
           galleryImage {
             localFiles {
               childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 1.3)
+                gatsbyImageData(
+                  formats: WEBP
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                )
               }
               publicURL
             }
