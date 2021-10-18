@@ -14,12 +14,13 @@ export const getData = graphql`
   {
     historique: allAirtable(
       filter: { table: { eq: "Historique" } }
-      sort: { fields: data___date, order: ASC }
+      sort: { fields: data___historiqueDate, order: ASC }
     ) {
+      totalCount
       nodes {
         data {
-          date
-          description
+          historiqueDate
+          historiqueDescription
         }
       }
     }

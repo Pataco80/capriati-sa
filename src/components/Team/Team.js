@@ -29,11 +29,7 @@ export const getData = graphql`
           teamPhoto {
             localFiles {
               childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED
-                  formats: WEBP
-                  placeholder: BLURRED
-                )
+                gatsbyImageData(layout: CONSTRAINED)
               }
             }
           }

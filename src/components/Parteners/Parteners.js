@@ -15,13 +15,13 @@ const getData = graphql`
   {
     parteners: allAirtable(
       filter: { table: { eq: "Partenaires" } }
-      sort: { fields: data___logoId, order: ASC }
+      sort: { fields: data___partenaireId, order: ASC }
     ) {
       nodes {
         data {
-          name
-          url
-          label
+          partenaireName
+          partenaireUrl
+          partenaireLabel
           logo {
             localFiles {
               childImageSharp {

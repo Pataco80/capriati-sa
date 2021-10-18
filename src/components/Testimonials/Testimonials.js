@@ -20,7 +20,6 @@ export const getData = graphql`
       totalCount
       nodes {
         data {
-          clientId
           clientName
           clientCity
           testimonialDescription
@@ -91,13 +90,8 @@ const Testimonials = () => {
       <Title tag='h2' title='Avis de nos Clients' />
       <S.CenteredContainer>
         {testimonials.map((article, articleIndex) => {
-          const {
-            clientId,
-            clientName,
-            clientCity,
-            testimonialDescription,
-            rating,
-          } = article.data
+          const { clientName, clientCity, testimonialDescription, rating } =
+            article.data
 
           let position = 'nextSlide'
           if (articleIndex === index) {
@@ -111,7 +105,7 @@ const Testimonials = () => {
           }
 
           return (
-            <S.Article className={position} Key={clientId}>
+            <S.Article className={position} Key={articleIndex}>
               <S.TitleClient tag='h5' title={clientName}>
                 <S.City>{clientCity}</S.City>
               </S.TitleClient>

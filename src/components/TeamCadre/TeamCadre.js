@@ -16,12 +16,7 @@ const TeamCadre = (props) => {
   return (
     <S.CadreItemWrapper>
       <Profile tagName='h4' titleName={teamName} tagJob='h6' titleJob={teamJob}>
-        <GatsbyImage
-          image={imagePath}
-          alt={`Photo de ${teamName}`}
-          width={250}
-          height={250}
-        />
+        <GatsbyImage image={imagePath} alt={`Photo de ${teamName}`} />
       </Profile>
       <S.CadreInfo>
         <S.InfoList
