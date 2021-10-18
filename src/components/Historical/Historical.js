@@ -39,13 +39,13 @@ const Historical = () => {
       <Title tag='h3' title='Historique' />
       <S.HistoricalTable>
         {historiqueList.map((item, i) => {
-          const { date, description } = item.data
+          const { historiqueDate, historiqueDescription } = item.data
 
           // Return Historic Items
           return (
             <S.HistoricalItem Key={i}>
-              <S.HistoricalDate>{date}</S.HistoricalDate>
-              <S.HistoricaText>{description}</S.HistoricaText>
+              <S.HistoricalDate>{historiqueDate}</S.HistoricalDate>
+              <S.HistoricaText>{historiqueDescription}</S.HistoricaText>
             </S.HistoricalItem>
           )
         })}

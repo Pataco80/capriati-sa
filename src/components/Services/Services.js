@@ -25,7 +25,7 @@ export const getData = graphql`
           serviceIcon {
             ...AirtableImgParams
           }
-          featuredServiceImg {
+          serviceFeatureImg {
             ...AirtableImgParams
           }
           serviceImg1 {
@@ -65,7 +65,7 @@ const Services = (props) => {
           const {
             serviceName,
             serviceIcon,
-            featuredServiceImg,
+            serviceFeatureImg,
             serviceDescriptions,
             serviceImg1,
             serviceImg2,
@@ -89,7 +89,7 @@ const Services = (props) => {
               icon={icon}
               name={serviceName}
               altIcon={`${serviceName} icon`}
-              featuredServiceImg={featuredServiceImg}
+              serviceFeatureImg={serviceFeatureImg}
               altFeatured={`${serviceName} banner`}
               description={`${serviceDescriptions}`}
               gallery={gallery}

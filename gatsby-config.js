@@ -101,12 +101,13 @@ module.exports = {
             tableName: `Services`,
             mapping: {
               serviceIcon: `fileNode`,
-              featuredServiceImg: `fileNode`,
+              serviceFeatureImg: `fileNode`,
               serviceGallery: `fileNode`,
               serviceImg1: `fileNode`,
               serviceImg2: `fileNode`,
               serviceImg3: `fileNode`,
             }, // optional, e.g. "text/markdown", "fileNode"
+            tableLinks: [`serviceGallery`, `serviceClients`],
           },
           {
             baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
