@@ -1,13 +1,13 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
-import * as S from "./SearchButtonsStyled"
+import * as S from './SearchButtonsStyled'
 
 const SearchButtons = ({ galleryDatas, setGalleryDatas, setBackToAll }) => {
   const [index, setIndex] = useState(0)
   const categories = [
-    "all",
+    'Tout voir',
     ...new Set(
-      galleryDatas.map(gallery => {
+      galleryDatas.map((gallery) => {
         return gallery.data.galleryServices
       })
     ),
@@ -15,11 +15,11 @@ const SearchButtons = ({ galleryDatas, setGalleryDatas, setBackToAll }) => {
 
   const showgalleryDatas = (galleryServices, serviceIndex) => {
     setIndex(serviceIndex)
-    if (galleryServices === "all") {
+    if (galleryServices === 'all') {
       setBackToAll()
     } else {
       const tempGalleryDatas = galleryDatas.filter(
-        gallery => gallery.data.galleryServices === galleryServices
+        (gallery) => gallery.data.galleryServices === galleryServices
       )
       setGalleryDatas(tempGalleryDatas)
     }
@@ -34,7 +34,7 @@ const SearchButtons = ({ galleryDatas, setGalleryDatas, setBackToAll }) => {
             small
             notRadius
             Key={serviceIndex}
-            className={index === serviceIndex ? "active" : undefined}
+            className={index === serviceIndex ? 'active' : undefined}
             onClick={() => showgalleryDatas(galleryServices, serviceIndex)}
           >
             {galleryServices}

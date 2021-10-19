@@ -45,10 +45,17 @@ export const Article = styled.article`
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 5rem;
+  padding: 0 2.5rem;
   overflow: hidden;
   opacity: 0;
   transform: translateX(0);
+
+  ${media.greaterThan('smTablet')`
+    padding: 0 3.5rem;
+    `}
+  ${media.greaterThan('tablet')`
+    padding: 0 5rem;
+    `}
 
   &.activeSlide {
     opacity: 1;
