@@ -13,8 +13,8 @@ const TeamTable = ({ team, title }) => {
       <Title tag='h3' notPadding title={title} />
       <ul>
         {team.map((item, i) => {
-          const { name } = item.data
-          return <S.TeamItem key={i}>{name}</S.TeamItem>
+          const { teamName } = item.data
+          return <S.TeamItem key={i}>{teamName}</S.TeamItem>
         })}
       </ul>
     </S.TeamWrapper>

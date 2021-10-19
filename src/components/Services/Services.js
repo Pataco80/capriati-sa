@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react'
 
 // Import components from Gatsby and plugins Gatsby
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby'
 // Import Components for App
-import { Title, ServiceItem, ServiceItemCard } from "@components"
-import { getImage } from "gatsby-plugin-image"
+import { Title, ServiceItem, ServiceItemCard } from '@components'
+import { getImage } from 'gatsby-plugin-image'
 
 // Import styles from styled-components file
-import * as S from "./ServicesStyled"
+import * as S from './ServicesStyled'
 
 // GraphQl Queries
 export const getData = graphql`
@@ -25,7 +25,7 @@ export const getData = graphql`
           serviceIcon {
             ...AirtableImgParams
           }
-          featuredServiceImg {
+          serviceFeatureImg {
             ...AirtableImgParams
           }
           serviceImg1 {
@@ -44,14 +44,14 @@ export const getData = graphql`
   fragment AirtableImgParams on AirtableField {
     localFiles {
       childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, formats: WEBP)
+        gatsbyImageData(layout: FULL_WIDTH)
       }
       name
     }
   }
 `
 // Component
-const Services = props => {
+const Services = (props) => {
   // Component Variables
   const { home, background, padding } = props
   const data = useStaticQuery(getData)
@@ -59,13 +59,13 @@ const Services = props => {
   // Render Component
   return (
     <S.ServicesWrapper background={background} padding={padding}>
-      {home ? <Title tag="h2" title="Nos Services" /> : ""}
-      <S.ServicesContent padding="0">
+      {home ? <Title tag='h2' title='Nos Services' /> : ''}
+      <S.ServicesContent padding='0'>
         {servicesList.map((service, index) => {
           const {
             serviceName,
             serviceIcon,
-            featuredServiceImg,
+            serviceFeatureImg,
             serviceDescriptions,
             serviceImg1,
             serviceImg2,
@@ -89,7 +89,7 @@ const Services = props => {
               icon={icon}
               name={serviceName}
               altIcon={`${serviceName} icon`}
-              featuredServiceImg={featuredServiceImg}
+              serviceFeatureImg={serviceFeatureImg}
               altFeatured={`${serviceName} banner`}
               description={`${serviceDescriptions}`}
               gallery={gallery}

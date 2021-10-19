@@ -1,14 +1,14 @@
-import React from "react"
+import React from 'react'
 
 // Import Hooks
 //import { useWindowSize } from "@hooks"
 
 // Import components from Gatsby and plugins Gatsby
 // Import Components for App
-import { GalleryItem } from "@components"
+import { GalleryItem } from '@components'
 // Import styles from styled-components file and helpers
-import * as S from "./ServiceItemStyled"
-import { getImage } from "gatsby-plugin-image"
+import * as S from './ServiceItemStyled'
+import { getImage } from 'gatsby-plugin-image'
 //import { breakpoints } from "@helpers"
 
 // GraphQl Queries
@@ -19,7 +19,7 @@ const ServiceItem = ({
   altIcon,
   altFeatured,
   icon,
-  featuredServiceImg,
+  serviceFeatureImg,
   description,
   gallery,
   home,
@@ -27,7 +27,7 @@ const ServiceItem = ({
   // Component Variables
   //const windowSize = useWindowSize()
   //const toHero = breakpoints.smTablet
-  const featuredImgPath = getImage(featuredServiceImg.localFiles[0])
+  const featuredImgPath = getImage(serviceFeatureImg.localFiles[0])
   // Component Functions
   // Render Component
   return (
@@ -46,15 +46,15 @@ const ServiceItem = ({
               <h3>{name}</h3>
             </S.BannerContent>
           </S.ServiceBanner>
-        </S.ServiceBcgImage>{" "}
+        </S.ServiceBcgImage>{' '}
       </S.ServiceHeader>
       <S.ServiceBody
-        padding="0"
+        padding='0'
         dangerouslySetInnerHTML={{ __html: `${description}` }}
       ></S.ServiceBody>
 
       {!home && (
-        <S.GallerySection padding="3rem 0 5rem">
+        <S.GallerySection padding='3rem 0 5rem'>
           {gallery.map((item, index) => {
             const image = getImage(item.localFiles[0])
             const altImg = item.localFiles[0].name

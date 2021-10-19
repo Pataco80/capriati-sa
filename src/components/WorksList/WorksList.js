@@ -8,12 +8,12 @@ export const getData = graphql`
   {
     worksQuery: allAirtable(
       filter: { table: { eq: "Clients" } }
-      sort: { fields: data___endWork, order: DESC }
+      sort: { fields: data___clientEndWork, order: DESC }
     ) {
       nodes {
         data {
           clientName
-          endWork(formatString: "MMMM YYYY", locale: "fr")
+          clientEndWork(formatString: "MMMM YYYY", locale: "fr")
           clientCity
           clientDescription
           clientServices {

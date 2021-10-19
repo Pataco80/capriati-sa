@@ -15,18 +15,19 @@ const TeamCadresList = ({ team }) => {
     <S.TeamCadresWrapper>
       {team.map((cadre, i) => {
         // Images Variables and Functions
-        const { name, job, activity, jobdate, image } = cadre.data
+        const { teamName, teamJob, teamActivity, teamJobDate, teamPhoto } =
+          cadre.data
 
         // Return Team Images
         return (
           <TeamCadre
             Key={i}
-            name={name}
-            job={job}
-            activity={activity}
-            jobdate={jobdate}
-            image={image}
-            altPhoto={name}
+            teamName={teamName}
+            teamJob={teamJob}
+            teamActivity={teamActivity}
+            teamJobDate={teamJobDate}
+            teamPhoto={teamPhoto}
+            altPhoto={teamName}
           />
         )
       })}

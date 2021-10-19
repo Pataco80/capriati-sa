@@ -14,17 +14,16 @@ export const getData = graphql`
     allAirtable(
       filter: {
         table: { eq: "Clients" }
-        data: { testimonial: { eq: "true" } }
+        data: { clientTestimonial: { eq: "true" } }
       }
     ) {
       totalCount
       nodes {
         data {
-          clientId
           clientName
           clientCity
-          testimonialDescription
-          rating
+          clientTestimonialDescription
+          clientRating
         }
       }
     }
@@ -92,11 +91,10 @@ const Testimonials = () => {
       <S.CenteredContainer>
         {testimonials.map((article, articleIndex) => {
           const {
-            clientId,
             clientName,
             clientCity,
-            testimonialDescription,
-            rating,
+            clientTestimonialDescription,
+            clientRating,
           } = article.data
 
           let position = 'nextSlide'
@@ -111,17 +109,17 @@ const Testimonials = () => {
           }
 
           return (
-            <S.Article className={position} Key={clientId}>
+            <S.Article className={position} Key={articleIndex}>
               <S.TitleClient tag='h5' title={clientName}>
                 <S.City>{clientCity}</S.City>
               </S.TitleClient>
               <S.ArticleText>
                 <S.RightQuote size={32} />
-                <S.Description>{testimonialDescription}</S.Description>
+                <S.Description>{clientTestimonialDescription}</S.Description>
                 <S.LeftQuote size={32} />
               </S.ArticleText>
               <PrettyRating
-                value={rating}
+                value={clientRating}
                 icons={icons.star}
                 colors={colors.star}
                 max={5}
