@@ -34,4 +34,7 @@ export const Image = styled(GatsbyImage)`
   &.gatsby-image-wrapper {
     aspect-ratio: 1.4;
   }
+  img {
+    ${setRadius({ allPx: 12 })};
+  }
 `
