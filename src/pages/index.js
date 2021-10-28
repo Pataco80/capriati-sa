@@ -1,10 +1,14 @@
-import * as React from 'react'
+import React from 'react'
+
+// Import Components for the page
 import { Layout, Seo, Hero, About, Services, Testimonials } from '@components'
 
 // Import styled-components, styledElements and helpers
 import { setColor } from '@helpers'
 
+// Component
 const IndexPage = () => {
+  // Render Component
   return (
     <Layout home background={`${setColor.mainWhite}`}>
       <Seo
