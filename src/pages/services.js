@@ -30,7 +30,7 @@ const ServicesPage = ({ data }) => {
 
   // Render Component
   return (
-    <Layout background={`${setColor.mainGreyL3}`}>
+    <Layout background={`${setColor.mainWhite}`}>
       <Seo
         pathname='/services/'
         title='Nos Services'

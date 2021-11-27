@@ -25,9 +25,6 @@ export const getData = graphql`
           serviceIcon {
             ...AirtableImgParams
           }
-          serviceFeatureImg {
-            ...AirtableImgParams
-          }
           serviceImg1 {
             ...AirtableImgParams
           }
@@ -37,10 +34,14 @@ export const getData = graphql`
           serviceImg3 {
             ...AirtableImgParams
           }
+          serviceFeatureImg {
+            ...AirtableImgParams
+          }
         }
       }
     }
   }
+
   fragment AirtableImgParams on AirtableField {
     localFiles {
       childImageSharp {

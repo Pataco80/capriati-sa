@@ -1,5 +1,4 @@
 import React from 'react'
-//import { Tab, WorksList, WorksGallery } from '@components'
 
 import Tab from './Tab'
 import WorksList from '../WorksList/WorksList'
@@ -7,12 +6,12 @@ import WorksGallery from '../WorksGallery/WorksGallery'
 
 const tabContent = [
   {
-    title: 'Nos Travaux',
-    content: <WorksList />,
-  },
-  {
     title: 'Notre gallerie',
     content: <WorksGallery />,
+  },
+  {
+    title: 'Nos Travaux',
+    content: <WorksList />,
   },
 ]
 

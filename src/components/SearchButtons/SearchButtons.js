@@ -8,18 +8,18 @@ const SearchButtons = ({ galleryDatas, setGalleryDatas, setBackToAll }) => {
     'Tout voir',
     ...new Set(
       galleryDatas.map((gallery) => {
-        return gallery.data.galleryServices
+        return gallery.data.galleryService
       })
     ),
   ]
 
-  const showgalleryDatas = (galleryServices, serviceIndex) => {
+  const showgalleryDatas = (galleryService, serviceIndex) => {
     setIndex(serviceIndex)
-    if (galleryServices === 'all') {
+    if (galleryService === 'Tout voir') {
       setBackToAll()
     } else {
       const tempGalleryDatas = galleryDatas.filter(
-        (gallery) => gallery.data.galleryServices === galleryServices
+        (gallery) => gallery.data.galleryService === galleryService
       )
       setGalleryDatas(tempGalleryDatas)
     }
@@ -27,7 +27,7 @@ const SearchButtons = ({ galleryDatas, setGalleryDatas, setBackToAll }) => {
 
   return (
     <S.ButtonsWrapper>
-      {categories.map((galleryServices, serviceIndex) => {
+      {categories.map((galleryService, serviceIndex) => {
         return (
           <S.ButtonService
             outline
@@ -35,9 +35,9 @@ const SearchButtons = ({ galleryDatas, setGalleryDatas, setBackToAll }) => {
             notRadius
             Key={serviceIndex}
             className={index === serviceIndex ? 'active' : undefined}
-            onClick={() => showgalleryDatas(galleryServices, serviceIndex)}
+            onClick={() => showgalleryDatas(galleryService, serviceIndex)}
           >
-            {galleryServices}
+            {galleryService}
           </S.ButtonService>
         )
       })}

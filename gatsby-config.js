@@ -107,20 +107,20 @@ module.exports = {
               serviceImg2: `fileNode`,
               serviceImg3: `fileNode`,
             }, // optional, e.g. "text/markdown", "fileNode"
-            tableLinks: [`serviceGallery`, `serviceClients`],
+            tableLinks: [`serviceGallery`, `serviceWork`],
           },
           {
             baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
-            tableName: `Gallery`,
+            tableName: `Gallerie`,
             mapping: {
               galleryImage: `fileNode`,
             }, // optional, e.g. "text/markdown", "fileNode"
-            tableLinks: [`galleryClients`],
+            tableLinks: [`galleryWork`, `galleryServicesLink`],
           },
           {
             baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
-            tableName: `Clients`,
-            tableLinks: [`clientGallery`, `clientServices`],
+            tableName: `Travaux`,
+            tableLinks: [`workGallery`, `workServices`],
           },
           {
             baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
@@ -134,7 +134,7 @@ module.exports = {
             baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
             tableName: `Partenaires`,
             mapping: {
-              logo: `fileNode`,
+              partenaireLogo: `fileNode`,
             }, // optional, e.g. "text/markdown", "fileNode"
           },
         ],
