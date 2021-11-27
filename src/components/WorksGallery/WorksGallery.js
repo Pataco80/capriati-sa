@@ -10,6 +10,7 @@ import * as S from './WorksGalleryStyled'
 const WorksGallery = () => {
   const data = useStaticQuery(getDatas)
   const galleryDatas = data.galleryQuery.nodes
+  console.log(data)
   return (
     <SimpleReactLightbox>
       <S.GalleryWrapper>
@@ -23,13 +24,11 @@ export default WorksGallery
 
 export const getDatas = graphql`
   {
-    galleryQuery: allAirtable(filter: { table: { eq: "Gallery" } }) {
-      totalCount
+    galleryQuery: allAirtable(filter: { table: { eq: "Gallerie" } }) {
       nodes {
-        id
         data {
           galleryImageLegend
-          galleryServices
+          galleryService
           galleryImage {
             localFiles {
               childImageSharp {

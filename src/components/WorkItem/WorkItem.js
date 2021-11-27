@@ -5,25 +5,17 @@ import * as S from './WorkItemStyled'
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 const WorkItem = ({ workData, padBtm }) => {
-  const {
-    clientName,
-    clientCity,
-    clientDescription,
-    clientServices,
-    clientGallery,
-  } = workData
+  const { workName, workDescription, workServices, workGallery } = workData
+
   return (
     <S.Wrapper>
       <S.ArticleHeader>
-        <S.ClientName tag='h5' title={clientName} notPadding>
-          <span>{'-'}</span>
-          <p>{clientCity}</p>
-        </S.ClientName>
+        <S.ClientName tag='h5' title={workName} notPadding />
       </S.ArticleHeader>
       <S.WorksServices>
         <S.ServiceTitle>Prestations / Services :</S.ServiceTitle>
         <S.StackList>
-          {clientServices.map((service, i) => {
+          {workServices.map((service, i) => {
             const { serviceName, serviceIcon } = service.data
             const imgPath = getImage(serviceIcon.localFiles[0])
             const imgName = serviceIcon.localFiles[0].name
@@ -37,11 +29,11 @@ const WorkItem = ({ workData, padBtm }) => {
           })}
         </S.StackList>
       </S.WorksServices>
-      <p>{clientDescription}</p>
+      <p>{workDescription}</p>
       <S.SectionGallery>
         <SimpleReactLightbox>
           <S.GalleryWrapper style={{ width: '100%' }}>
-            <Gallery galleryDatas={clientGallery} />
+            <Gallery galleryDatas={workGallery} />
           </S.GalleryWrapper>
         </SimpleReactLightbox>
       </S.SectionGallery>

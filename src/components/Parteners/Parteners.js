@@ -22,7 +22,7 @@ const getData = graphql`
           partenaireName
           partenaireUrl
           partenaireLabel
-          logo {
+          partenaireLogo {
             localFiles {
               childImageSharp {
                 gatsbyImageData(layout: FULL_WIDTH)
@@ -46,8 +46,8 @@ const Parteners = () => {
       <Title tag='h2' title='Nous sommes membres' />
       <S.PartenersLogosContainer>
         {partenersList.map((item, i) => {
-          const { name, url, label, logo } = item.data
-          const logoPath = getImage(logo.localFiles[0])
+          const { name, url, label, partenaireLogo } = item.data
+          const logoPath = getImage(partenaireLogo.localFiles[0])
           // Return Item on Card or page format
           return (
             <S.PartenersItemWrapper href={url} title={label} target='_blank'>

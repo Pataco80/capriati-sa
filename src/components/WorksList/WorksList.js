@@ -7,29 +7,16 @@ import WorkItem from '../WorkItem/WorkItem'
 export const getData = graphql`
   {
     worksQuery: allAirtable(
-      filter: { table: { eq: "Clients" } }
-      sort: { fields: data___clientEndWork, order: DESC }
+      filter: { table: { eq: "Travaux" } }
+      sort: { fields: data___dateEndWork, order: DESC }
     ) {
+      totalCount
       nodes {
         data {
-          clientName
-          clientEndWork(formatString: "MMMM YYYY", locale: "fr")
-          clientCity
-          clientDescription
-          clientServices {
-            data {
-              serviceName
-              serviceIcon {
-                localFiles {
-                  childImageSharp {
-                    gatsbyImageData(layout: FIXED, height: 32, width: 32)
-                  }
-                  name
-                }
-              }
-            }
-          }
-          clientGallery {
+          workName
+          dateEndWork(formatString: "MMMM YYYY", locale: "fr")
+          workDescription
+          workGallery {
             data {
               galleryImageLegend
               galleryImage {
@@ -37,7 +24,20 @@ export const getData = graphql`
                   childImageSharp {
                     gatsbyImageData(layout: FULL_WIDTH)
                   }
+                  name
                   publicURL
+                }
+              }
+            }
+          }
+          workServices {
+            data {
+              serviceName
+              serviceIcon {
+                localFiles {
+                  childImageSharp {
+                    gatsbyImageData(layout: FIXED, height: 32, width: 32)
+                  }
                   name
                 }
               }
