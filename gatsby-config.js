@@ -86,6 +86,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Noto Sans\:400,400i,700`,
+          `Roboto\:400,400i,700,700i`,
+          // you can also specify font weights and styles
+        ],
+        display: 'swap',
+      },
+    },
+    {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_USER_KEY, // may instead specify via env, see below

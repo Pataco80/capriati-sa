@@ -1,12 +1,12 @@
-import { generateMedia } from "styled-media-query"
-import { lighten, darken } from "polished"
+import { generateMedia } from 'styled-media-query'
+import { lighten, darken } from 'polished'
 
 // Colors Palette
 const baseColor = {
-  primaryColor: "#EE332D",
-  mainBlack: "#222222",
-  mainWhite: "#ffffff",
-  mainGrey: "#617d98",
+  primaryColor: '#EE332D',
+  mainBlack: '#222222',
+  mainWhite: '#ffffff',
+  mainGrey: '#617d98',
 }
 
 const polishedColor = {
@@ -41,7 +41,7 @@ export const setColor = {
 
 // Convert Hex color to rgba function to box-shadow or text-shadow
 const convertHexToRGBA = (hex, opacity) => {
-  const tempHex = hex.replace("#", "")
+  const tempHex = hex.replace('#', '')
   const r = parseInt(tempHex.substring(0, 2), 16)
   const g = parseInt(tempHex.substring(2, 4), 16)
   const b = parseInt(tempHex.substring(4, 6), 16)
@@ -51,8 +51,8 @@ const convertHexToRGBA = (hex, opacity) => {
 
 // Fonts Palette
 export const setFont = {
-  headingsFont: "Noto Sans JP",
-  bodyFont: "Roboto",
+  headingsFont: 'Noto Sans',
+  bodyFont: 'Roboto',
   defaultFonts: `"system",
   "-apple-system",
   ".SFNSText-Regular",
@@ -69,7 +69,7 @@ export const setPxToRem = (px = 16) => {
   return `${px / 16}rem`
 }
 
-export const setRem = x => {
+export const setRem = (x) => {
   return `${x}rem`
 }
 
@@ -82,15 +82,15 @@ export const breakpoints = {
 }
 
 export const media = generateMedia({
-  mobile: "15rem",
-  smTablet: "36rem",
-  tablet: "48rem",
-  lgTablet: "62rem",
-  desktop: "75rem",
+  mobile: '15rem',
+  smTablet: '36rem',
+  tablet: '48rem',
+  lgTablet: '62rem',
+  desktop: '75rem',
 })
 
 // Layout's Functions
-export const layout = ({ mW = 1140, wTh = "100%" } = {}) => {
+export const layout = ({ mW = 1140, wTh = '100%' } = {}) => {
   return `
   width: ${wTh};
     max-width:${setPxToRem(mW)};
@@ -99,11 +99,11 @@ export const layout = ({ mW = 1140, wTh = "100%" } = {}) => {
 }
 
 export const setFlex = ({
-  flex = "auto",
-  x = "center",
-  y = "center",
-  flDir = "row",
-  wrap = "wrap",
+  flex = 'auto',
+  x = 'center',
+  y = 'center',
+  flDir = 'row',
+  wrap = 'wrap',
 } = {}) => {
   return `display: flex;
   flex:${flex};
@@ -115,8 +115,8 @@ export const setFlex = ({
 }
 
 export const setGrid = ({
-  x = "space-evenly",
-  y = "space-evenly",
+  x = 'space-evenly',
+  y = 'space-evenly',
   xgap = 0,
   ygap = 0,
 } = {}) => {
@@ -130,8 +130,8 @@ export const setGrid = ({
 
 // Images and Background's Functions
 export const setLinearBcg = ({
-  colStart = "rgba(0, 0, 0, 0)",
-  colEnd = "rgba(0, 0, 0, 0)",
+  colStart = 'rgba(0, 0, 0, 0)',
+  colEnd = 'rgba(0, 0, 0, 0)',
 } = {}) => {
   return `background: linear-gradient(${colStart}, ${colEnd});
     opacity: 1 !important;
@@ -139,9 +139,9 @@ export const setLinearBcg = ({
 }
 
 export const setImgBcg = ({
-  size = "cover",
-  position = "center",
-  repeat = "no-repeat",
+  size = 'cover',
+  position = 'center',
+  repeat = 'no-repeat',
 } = {}) => {
   return `background-size: ${size} !important;
   background-position: ${position} !important;background-repeat: ${repeat} !important;
@@ -155,8 +155,8 @@ export const setLetterSpacing = (number = 3.2) => {
 
 export const setBorder = ({
   size = 2,
-  style = "solid",
-  color = "transparent",
+  style = 'solid',
+  color = 'transparent',
 } = {}) => {
   return `${setPxToRem(size)} ${style} ${color}`
 }
@@ -189,9 +189,9 @@ export const setRadius = ({
 }
 
 export const setTransition = ({
-  property = "all",
+  property = 'all',
   duration = 0.3,
-  timing = "linear",
+  timing = 'linear',
   delayTime = 0,
 } = {}) => {
   return `
@@ -203,9 +203,9 @@ export const setTransition = ({
 }
 
 export const setShadow = (
-  style = "",
+  style = '',
   {
-    inset = "",
+    inset = '',
     x = 0,
     y = 0,
     blur = 0,
@@ -213,16 +213,16 @@ export const setShadow = (
     opacity = 100,
   } = {}
 ) => {
-  if (style === "light") {
+  if (style === 'light') {
     return `${inset} 0 2px 8px ${convertHexToRGBA(setColor.mainBlack, 30)};`
   }
-  if (style === "medium") {
+  if (style === 'medium') {
     return `${inset} 0 3px 12px ${convertHexToRGBA(setColor.mainBlack, 50)};`
   }
-  if (style === "dark") {
+  if (style === 'dark') {
     return `${inset} 0 5px 15px ${convertHexToRGBA(setColor.mainBlack, 80)};`
   }
-  if (style === "none") {
+  if (style === 'none') {
     return `none;`
   } else {
     return `${y}px ${x}px ${blur}px ${convertHexToRGBA(color, opacity)};`
