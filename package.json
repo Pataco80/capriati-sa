@@ -26,6 +26,7 @@
     "gatsby-background-image": "^1.5.3",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-gatsby-cloud": "^3.2.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^1.14.1",
     "gatsby-plugin-manifest": "^3.14.0",
     "gatsby-plugin-netlify": "^3.14.0",
