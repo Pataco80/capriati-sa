@@ -118,7 +118,7 @@ export const NavbarLinks = styled(Link)`
 `
 
 export const NavbarSocial = styled.ul`
-  ${setFlex({ x: 'center' })};
+  ${setFlex({ x: 'flex-end' })};
   height: 0;
   ${media.greaterThan('lgTablet')`
   justify-content:flex-end;
@@ -150,4 +150,8 @@ export const NavbarSocial = styled.ul`
 
     }
   `}
+`
+
+export const LogoContainer = styled(Link)`
+  width: 150px;
 `

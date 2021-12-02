@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
 // Import constans and datas
-//import links from './links'
-//import socialLinks from './socialLinks'
-//import { links, socialLinks } from '@constants'
 import links from '../constants/links'
 import socialLinks from '../constants/socialLinks'
-import logo from '../../assets/images/logos/logoCapriatiTopbar.png'
+
+// Import components from Gatsby and plugins Gatsby
+import { StaticImage } from 'gatsby-plugin-image'
 
 // Import Components for App
 import { MenuAlt3 } from '@styled-icons/heroicons-outline/MenuAlt3'
@@ -33,7 +32,12 @@ const Navbar = ({ toScroll }) => {
     >
       <S.NavbarContent>
         <S.NavbarHeader>
-          <img src={logo} alt='Backroads Logo' />
+          <S.LogoContainer to='/' title="Retour à la page d'Accueil">
+            <StaticImage
+              src='../../assets/images/logos/logoCapriatiTopbar.png'
+              alt='Logo Capriati SA'
+            />
+          </S.LogoContainer>
           <S.NavbarToggle onClick={toggleNav}>
             <MenuAlt3 size={40} />
           </S.NavbarToggle>
@@ -51,9 +55,10 @@ const Navbar = ({ toScroll }) => {
         </S.NavbarNav>
         <S.NavbarSocial className={isOpen ? `show-nav` : ``}>
           {socialLinks.map((link, index) => {
+            const { title, url, icon } = link
             return (
-              <a key={index} href={link.url}>
-                {link.icon}
+              <a key={index} href={url} title={title}>
+                {icon}
               </a>
             )
           })}
