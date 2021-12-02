@@ -15,7 +15,6 @@ export const BcgImageWrapper = styled(BgImage)`
   align-self: stretch;
   justify-content: center;
   align-items: center;
-  margin-bottom: ${(props) => (props.services || props.services ? '2rem' : 0)};
 `
 
 export const BcgImageOverlay = styled.span`

@@ -8,7 +8,9 @@ import WorksTabs from '../Tabs/WorksTabs'
 // Import styles from styled-components file and gallery CSS file
 import * as S from './WorksStyled'
 
+// Component
 const Works = ({ background }) => {
+  // Render Component
   return (
     <S.WorksWrapper background={background}>
       <S.SectionInfo>
@@ -19,7 +21,5 @@ const Works = ({ background }) => {
     </S.WorksWrapper>
   )
 }
-
-// GraphQl Queries
 
 export default Works

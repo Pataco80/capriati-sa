@@ -1,8 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 // Import components from Gatsby and plugins Gatsby
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+
 // Import Components for App
 import { Title } from '@components'
 
@@ -60,17 +61,4 @@ const Parteners = () => {
   )
 }
 
-//PropTypes and more...
-Parteners.defaultProps = {
-  altLogo: `Logo du partenaire`,
-  url: `#`,
-  urlTitle: `Visiter notre partenaire`,
-}
-
-Parteners.propTypes = {
-  image: PropTypes.object.isRequired,
-  altLogo: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  urlTitle: PropTypes.string.isRequired,
-}
 export default Parteners

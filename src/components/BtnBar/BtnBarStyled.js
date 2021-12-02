@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // Import helpers
 import {
@@ -8,7 +8,7 @@ import {
   setColor,
   setTransition,
   media,
-} from "@helpers"
+} from '@helpers'
 
 // Export Styles for the component
 export const BtnBarWrapper = styled.section`
@@ -27,7 +27,7 @@ export const BtnBarWrapper = styled.section`
 `
 // Mobile
 export const MobileWrapper = styled.div`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   position: relative;
   ${setTransition()};
 `
@@ -49,7 +49,7 @@ export const MenuMobileCantainer = styled.div`
 
 // Desktop
 export const DesktopWrapper = styled.div`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   position: fixed;
   bottom: 70vw;
   height: auto;
@@ -58,18 +58,18 @@ export const DesktopWrapper = styled.div`
   z-index: 200;
   right: 1rem;
 
-  ${media.greaterThan("tablet")`
+  ${media.greaterThan('tablet')`
     right:1rem;
     bottom:30vw;
   `}
 
-  ${media.greaterThan("desktop")`
+  ${media.greaterThan('desktop')`
     bottom:20vw;
   `}
 `
 
 export const MenuDesktopCantainer = styled.div`
-  ${setFlex({ flDir: "column" })};
+  ${setFlex({ flDir: 'column' })};
   width: auto;
   position: relative;
   right: inherit;
@@ -81,12 +81,12 @@ export const MenuDesktopCantainer = styled.div`
 
 // Global Mobile and Desktop
 export const ButtonsContainer = styled.div`
-  ${setFlex({ flDir: "row" })};
+  ${setFlex({ flDir: 'row' })};
   width: 100%;
   background-color: ${setColor.primaryColor};
 
   &.desktop {
-    ${setFlex({ flDir: "column" })};
+    ${setFlex({ flDir: 'column' })};
     opacity: 0.8;
     ${setRadius({ allPx: 8 })};
     position: absolute;
@@ -105,10 +105,6 @@ export const ButtonsContainer = styled.div`
         ${setRadius({ allPx: 8 })};
         z-index: 20;
       }
-    }
-
-    .to-social {
-      position: absolute;
     }
 
     .to-top {

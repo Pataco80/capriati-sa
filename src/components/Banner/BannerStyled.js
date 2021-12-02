@@ -1,8 +1,5 @@
 import styled from 'styled-components'
 
-// Import StyledElements for basic styles
-//import { BannerStyledCenter } from "../styledElements/BannerStyled"
-
 // Import helpers
 import { setFlex } from '@helpers'
 

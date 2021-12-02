@@ -36,14 +36,10 @@ const Bannerhome = () => {
             Entreprise de peinture familiale depuis 1979
           </S.Text>
         </S.Description>
-        <S.CallActionBtn
-          secondary='true'
-          to='/services/'
-          title='Voir nos Services'
-        >
+        <S.CallActionBtn secondary to='/services/' title='Voir nos Services'>
           Nos Services
         </S.CallActionBtn>
-        <S.CallActionBtn primary='true' to='/contact/' title='Nous contacter'>
+        <S.CallActionBtn primary to='/contact/' title='Nous contacter'>
           Nous Contacter
         </S.CallActionBtn>
       </S.LayoutSection>

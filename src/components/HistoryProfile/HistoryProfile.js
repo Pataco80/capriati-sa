@@ -43,8 +43,10 @@ const Historyprofile = () => {
     <S.HistoryProfileWrapper>
       {profileList.map((profile, index) => {
         const { teamPhoto, teamName } = profile.data
+
         // Images Variables and Functions
         const imagePath = getImage(teamPhoto.localFiles[0])
+
         // Return Profile Images
         return (
           <S.ProfileItem Key={index}>
