@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Import Components for App
 import { Banner, BannerHome, BcgImage, VideoBcg } from '@components'
@@ -30,4 +31,10 @@ const Hero = (props) => {
 }
 
 // React PropTypes and more...
+Hero.propTypes = {
+  title: PropTypes.string.isRequired,
+  imgPath: PropTypes.object.isRequired,
+  altBcgImage: PropTypes.string.isRequired,
+}
+
 export default Hero

@@ -11,4 +11,11 @@ export const HeroWrapper = styled.section`
   ${setFlex({ flDir: 'column', wrap: 'nowrap' })};
   width: 100vw;
   overflow: hidden;
+  padding-bottom: ${(props) => (props.error ? '10rem' : 0)};
+
+  div {
+    display: flex;
+    flex: auto;
+    width: 100%;
+  }
 `
