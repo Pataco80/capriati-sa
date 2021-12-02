@@ -1,22 +1,11 @@
 import React from 'react'
-import {
-  FacebookWithCircle,
-  TwitterWithCircle,
-  LinkedinWithCircle,
-} from '@styled-icons/entypo-social'
+import { FacebookWithCircle } from '@styled-icons/entypo-social/FacebookWithCircle'
 
 const socialLinks = [
   {
+    title: 'Aller sur notre page Facebook',
     icon: <FacebookWithCircle />,
-    url: 'www.facebook.com',
-  },
-  {
-    icon: <TwitterWithCircle />,
-    url: 'www.twitter.com',
-  },
-  {
-    icon: <LinkedinWithCircle />,
-    url: 'www.linkedin.com',
+    url: 'https://www.facebook.com/Capriati-SA-102996874605584/',
   },
 ]
 
