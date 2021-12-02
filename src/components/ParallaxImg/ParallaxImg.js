@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 // Import Hooks
 import useWindowSize from '@hooks/useWindowSize'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -46,7 +47,6 @@ ParallaxImg.defaultProps = {
 }
 
 ParallaxImg.propTypes = {
-  fluid: PropTypes.object.isRequired,
   altImg: PropTypes.string.isRequired,
 }
 

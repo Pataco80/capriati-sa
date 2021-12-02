@@ -1,9 +1,11 @@
 import React from 'react'
 
+// Import Components for App
 import Tab from './Tab'
 import WorksList from '../WorksList/WorksList'
 import WorksGallery from '../WorksGallery/WorksGallery'
 
+// Create render panne content
 const tabContent = [
   {
     title: 'Notre gallerie',
@@ -15,7 +17,9 @@ const tabContent = [
   },
 ]
 
+// Component
 const WorksTabs = () => {
+  // Render component
   return (
     <Tab>
       {tabContent.map((tab, idx) => (

@@ -5,11 +5,25 @@ import { getImage } from 'gatsby-plugin-image'
 // Import Components for App
 import { Layout, Seo, Hero, References, Works } from '@components'
 
-// markup
+// GraphQl Queries
+export const query = graphql`
+  {
+    heroBcg: file(relativePath: { eq: "images/banners/work-page-banner.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+      name
+    }
+  }
+`
+
+// Component
 const WorksPage = ({ data }) => {
+  // Component variables
   const bcgImage = getImage(data.heroBcg)
   const altImg = data.heroBcg.name
 
+  // Render Component
   return (
     <Layout>
       <Seo
@@ -26,16 +40,5 @@ const WorksPage = ({ data }) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    heroBcg: file(relativePath: { eq: "images/banners/work-page-banner.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-      name
-    }
-  }
-`
 
 export default WorksPage

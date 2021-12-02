@@ -28,8 +28,10 @@ export const query = graphql`
 
 // Component
 const NotFoundPage = ({ data }) => {
+  // Component variables
   const bcgImage = getImage(data.heroBcg)
   const altImg = data.heroBcg.name
+
   // Render Component
   return (
     <Layout>

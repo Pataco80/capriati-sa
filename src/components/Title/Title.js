@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Import styles from styled-components file and helpers
 import * as S from './TitleStyled'
@@ -16,5 +17,14 @@ const Title = (props) => {
 }
 
 // React PropTypes and more...
+Title.defaultProps = {
+  tag: 'h1',
+  title: 'Mon titre',
+}
+
+Title.propTypes = {
+  tag: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+}
 
 export default Title

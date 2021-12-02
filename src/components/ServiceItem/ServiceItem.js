@@ -1,17 +1,13 @@
 import React from 'react'
 
-// Import Hooks
-//import { useWindowSize } from "@hooks"
-
 // Import components from Gatsby and plugins Gatsby
+import { getImage } from 'gatsby-plugin-image'
+
 // Import Components for App
 import { GalleryItem } from '@components'
+
 // Import styles from styled-components file and helpers
 import * as S from './ServiceItemStyled'
-import { getImage } from 'gatsby-plugin-image'
-//import { breakpoints } from "@helpers"
-
-// GraphQl Queries
 
 // Component
 const ServiceItem = ({
@@ -25,10 +21,8 @@ const ServiceItem = ({
   home,
 }) => {
   // Component Variables
-  //const windowSize = useWindowSize()
-  //const toHero = breakpoints.smTablet
   const featuredImgPath = getImage(serviceFeatureImg.localFiles[0])
-  // Component Functions
+
   // Render Component
   return (
     <S.ServiceWrapper>
@@ -41,7 +35,7 @@ const ServiceItem = ({
           <S.ServiceBanner>
             <S.BannerContent>
               <S.IconContainer>
-                <S.ServiceIcon name={name} alt={altIcon} image={icon} />
+                <S.ServiceIcon alt={altIcon} image={icon} />
               </S.IconContainer>
               <h3>{name}</h3>
             </S.BannerContent>

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Import components from Gatsby and plugins Gatsby
 import { getImage } from 'gatsby-plugin-image'
@@ -54,4 +55,8 @@ const Gallery = ({ galleryDatas: data = [], searchButtons }) => {
   )
 }
 
+// React PropTypes and more...
+Gallery.propTypes = {
+  galleryDatas: PropTypes.array.isRequired,
+}
 export default Gallery

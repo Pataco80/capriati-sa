@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 // Import React Hooks
 import useSiteMetadata from '@hooks/useSiteMetadata'
 

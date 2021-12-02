@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Import Components for App
 import { Title } from '@components'
@@ -6,6 +7,7 @@ import { Title } from '@components'
 // Import styles from styled-components file
 import * as S from './TeamTableStyled'
 
+// Component
 const TeamTable = ({ team, title }) => {
   // Render Component
   return (
@@ -19,6 +21,14 @@ const TeamTable = ({ team, title }) => {
       </ul>
     </S.TeamWrapper>
   )
+}
+
+TeamTable.defaultProps = {
+  title: `Liste d'employés`,
+}
+
+TeamTable.propTypes = {
+  title: PropTypes.string.isRequired,
 }
 
 export default TeamTable

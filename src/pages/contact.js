@@ -38,6 +38,7 @@ export const query = graphql`
 
 // Component
 const ContactPage = ({ data }) => {
+  // Component variables
   const bcgImage = getImage(data.heroBcg)
   const altImg = data.heroBcg.name
   const {
@@ -52,13 +53,14 @@ const ContactPage = ({ data }) => {
     businessEmail,
   } = useSiteMetadata()
 
-  // fonction de suppression d'espaces pour les liens
+  // Delete spaces for links
   const removeSpaces = (string) => {
     return string.replace(/\s/g, '')
   }
   const hrefPhone = `tel:${removeSpaces(businessPhone)}`
   const hrefEmail = `mailto:${businessEmail}`
 
+  // Render Component
   return (
     <Layout background={`${setColor.mainGreyL3}`}>
       <Seo

@@ -34,12 +34,14 @@ export const query = graphql`
   }
 `
 
-// markup
+// Component
 const AboutPage = ({ data }) => {
+  // Component variables
   const { siteTitle } = useSiteMetadata()
   const bcgImage = getImage(data.heroBcg)
   const altImg = data.heroBcg.name
 
+  // Render Component
   return (
     <Layout background={`${setColor.mainWhite}`}>
       <Seo

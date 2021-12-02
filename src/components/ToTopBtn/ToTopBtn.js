@@ -59,12 +59,10 @@ const ToTopBtn = ({ className, showBelow }) => {
 // React PropTypes and more...
 ToTopBtn.defaultProps = {
   showBelow: 0,
-  title: ``,
 }
 
 ToTopBtn.propTypes = {
   showBelow: PropTypes.number.isRequired,
-  title: PropTypes.string,
   className: PropTypes.string,
 }
 export default ToTopBtn

@@ -1,12 +1,21 @@
 import React from 'react'
+
+// Import components from Gatsby and plugins Gatsby
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
+// Import Components for App
 import SimpleReactLightbox from 'simple-react-lightbox'
 import Gallery from '../Gallery/Gallery'
+
+// Import styles from styled-components file
 import * as S from './WorkItemStyled'
 
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-const WorkItem = ({ workData, padBtm }) => {
+// Component
+const WorkItem = ({ workData }) => {
+  // Component variables
   const { workName, workDescription, workServices, workGallery } = workData
 
+  // Render component
   return (
     <S.Wrapper>
       <S.ArticleHeader>

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Import styles from component styled file
 import * as S from './ProfileStyled'
@@ -39,5 +40,17 @@ const Profile = (props) => {
 }
 
 // React PropTypes and more...
+Profile.defaultProps = {
+  tag: `h4`,
+  title: `Nom du profil`,
+  tagJob: `h6`,
+}
+
+Profile.propTypes = {
+  tag: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tagJob: PropTypes.string,
+  titleJob: PropTypes.string,
+}
 
 export default Profile

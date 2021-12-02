@@ -1,9 +1,13 @@
 import React from 'react'
 
-import { SectionContent } from '../StyledElements/SectionStyled'
+// Import components from Gatsby and plugins Gatsby
 import { graphql, useStaticQuery } from 'gatsby'
+
+// Import Components for App
+import { SectionContent } from '../StyledElements/SectionStyled'
 import WorkItem from '../WorkItem/WorkItem'
 
+// GraphQl Queries
 export const getData = graphql`
   {
     worksQuery: allAirtable(
@@ -49,9 +53,13 @@ export const getData = graphql`
   }
 `
 
+// Component
 const WorksList = () => {
+  // Component variables
   const data = useStaticQuery(getData)
   const worksListing = data.worksQuery.nodes
+
+  // Render component
   return (
     <SectionContent>
       {worksListing.map((work, index) => {
