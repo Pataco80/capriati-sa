@@ -43,15 +43,10 @@ module.exports = {
     conceptorWebSite: websiteConfig.webSiteConceptor,
     formSpree: websiteConfig.formSpree,
   },
+
+  // Plugins Configuration
   plugins: [
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        displayName: true,
-      },
-    },
-    `gatsby-plugin-netlify`,
-    'gatsby-plugin-sitemap',
+    // File System
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -68,6 +63,8 @@ module.exports = {
       },
       __key: 'assets',
     },
+
+    // Imports files Configuration
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
@@ -85,28 +82,22 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Noto Sans\:400,400i,700`,
-          `Roboto\:400,400i,700,700i`,
-          // you can also specify font weights and styles
-        ],
-        display: 'swap',
-      },
-    },
+
+    // Data Configuration
     {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_USER_KEY, // may instead specify via env, see below
         concurrency: 5, // default, see using markdown and attachments for more information
         tables: [
+          // Liste des Employés Database
           {
             baseId: process.env.AIRTABLE_TEAM_DATABASE_ID,
             tableName: `Team`,
             mapping: { teamPhoto: `fileNode` }, // optional, e.g. "text/markdown", "fileNode"
           },
+
+          // Données de Site Database
           {
             baseId: process.env.AIRTABLE_SITE_DATABASE_ID,
             tableName: `Services`,
@@ -151,6 +142,8 @@ module.exports = {
         ],
       },
     },
+
+    // Image Configuration
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-sharp`,
@@ -162,6 +155,32 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+
+    // Fonts Configuration
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Noto Sans\:400,400i,700`,
+          `Roboto\:400,400i,700,700i`,
+          // you can also specify font weights and styles
+        ],
+        display: 'swap',
+      },
+    },
+
+    // Styles Configuration
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: true,
+      },
+    },
+
+    // Other Plugins and Configurations
+    'gatsby-plugin-sitemap',
+
+    // Application Manifest
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
