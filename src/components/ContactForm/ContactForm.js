@@ -22,12 +22,12 @@ const Contactform = () => {
         <S.ContactForm
           name='contact-form'
           method='post'
+          netlify-honeypot='bot-field'
           data-netlify='true'
-          data-netlify-honeypot='bot-field'
           autocomplete='on'
         >
           <input type='hidden' name='bot-field' />
-          <input type='hidden' name='contact-form' value='contact' />
+          <input type='hidden' name='contact-form' value='contact-form' />
           <S.ContactInfo>
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
