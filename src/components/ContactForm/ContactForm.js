@@ -19,7 +19,13 @@ const Contactform = () => {
     <Section>
       <Title tag='h3' title='Contactez-nous via notre formulaire' />
       <S.FormContainer padding='0'>
-        <S.ContactForm action={formSpree} method='POST' autocomplete='on'>
+        <S.ContactForm
+          name='capriati-contact-form'
+          method='POST'
+          data-netlify='true'
+          data-netlify-recaptcha='true'
+          autocomplete='on'
+        >
           <S.ContactInfo>
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
@@ -70,7 +76,8 @@ const Contactform = () => {
               required
             />
           </S.ContactMessage>
-          <S.Input type='text' name='_gotcha' style={{ display: 'none' }} />
+
+          <div data-netlify-recaptcha='true'></div>
           <ButtonForm
             primary
             type='submit'
