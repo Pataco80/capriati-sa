@@ -53,6 +53,7 @@ export const NavbarToggle = styled.button`
   border: none;
   background-color: ${setColor.mainWhite};
   padding: 0;
+  margin-right: ${setPxToRem(8)};
 
   ${media.greaterThan('lgTablet')`
     display: none;
@@ -118,7 +119,7 @@ export const NavbarLinks = styled(Link)`
 `
 
 export const NavbarSocial = styled.ul`
-  ${setFlex({ x: 'flex-end' })};
+  ${setFlex({ x: 'center' })};
   height: 0;
   ${media.greaterThan('lgTablet')`
   justify-content:flex-end;
@@ -154,4 +155,5 @@ export const NavbarSocial = styled.ul`
 
 export const LogoContainer = styled(Link)`
   width: 150px;
+  margin-left: ${setPxToRem(8)};
 `
