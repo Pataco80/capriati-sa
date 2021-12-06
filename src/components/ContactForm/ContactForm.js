@@ -23,9 +23,14 @@ const Contactform = () => {
           name='capriati-contact-form'
           method='POST'
           data-netlify='true'
-          data-netlify-recaptcha='true'
           autocomplete='on'
+          onSubmit='submit'
         >
+          <input
+            type='hidden'
+            name='capriati-contact-form'
+            value='capriati-contact-form'
+          />
           <S.ContactInfo>
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
@@ -76,12 +81,6 @@ const Contactform = () => {
               required
             />
           </S.ContactMessage>
-
-          <input
-            type='hidden'
-            name='capriati-contact-form'
-            value='capriati-contact-form'
-          />
           <ButtonForm
             primary
             type='submit'
