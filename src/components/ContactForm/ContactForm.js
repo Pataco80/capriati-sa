@@ -77,7 +77,11 @@ const Contactform = () => {
             />
           </S.ContactMessage>
 
-          <div data-netlify-recaptcha='true'></div>
+          <input
+            type='hidden'
+            name='capriati-contact-form'
+            value='capriati-contact-form'
+          />
           <ButtonForm
             primary
             type='submit'
