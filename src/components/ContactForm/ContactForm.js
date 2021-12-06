@@ -20,17 +20,12 @@ const Contactform = () => {
       <Title tag='h3' title='Contactez-nous via notre formulaire' />
       <S.FormContainer padding='0'>
         <S.ContactForm
-          name='capriati-contact-form'
-          method='POST'
+          name='contact-form'
+          method='post'
           data-netlify='true'
+          data-netlify-honeypot='bot-field'
           autocomplete='on'
-          onSubmit='submit'
         >
-          <input
-            type='hidden'
-            name='capriati-contact-form'
-            value='capriati-contact-form'
-          />
           <S.ContactInfo>
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
