@@ -2,7 +2,7 @@ import React from 'react'
 
 // Import Components for App
 import { Title } from '@components'
-import useSiteMetadata from '@hooks/useSiteMetadata'
+//import useSiteMetadata from '@hooks/useSiteMetadata'
 
 // Import StyledElements for basic styles
 import { Section } from '../StyledElements/SectionStyled'
@@ -13,21 +13,20 @@ import * as S from './ContactFormStyled'
 
 // Component
 const Contactform = () => {
-  const { formSpree } = useSiteMetadata()
+  //const { formSpree } = useSiteMetadata()
   // Render Component
   return (
     <Section>
       <Title tag='h3' title='Contactez-nous via notre formulaire' />
       <S.FormContainer padding='0'>
         <S.ContactForm
-          name='contact-form'
+          name='contact'
           method='post'
-          netlify-honeypot='bot-field'
           data-netlify='true'
+          data-netlify-honeypot='bot-field'
           autocomplete='on'
         >
-          <input type='hidden' name='bot-field' />
-          <input type='hidden' name='contact-form' value='contact-form' />
+          <input type='hidden' name='form-name' value='contact' />
           <S.ContactInfo>
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
