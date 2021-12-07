@@ -13,8 +13,6 @@ import { Layout, Seo, Hero, Title, ContactForm } from '@components'
 import { PhoneAlt, Envelope } from '@styled-icons/fa-solid'
 import { Map } from '@styled-icons/boxicons-regular'
 
-import Contact from '../components/ContactForm/Contact'
-
 // Import styled-components, styledElements and helpers
 import styled from 'styled-components'
 import {

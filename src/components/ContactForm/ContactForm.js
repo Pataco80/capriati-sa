@@ -23,7 +23,7 @@ const Contactform = () => {
           autocomplete='on'
         >
           <S.ContactInfo>
-            <input type='text' name='_gotcha' style='display:none' />
+            <input type='text' name='_gotcha' style={{ display: 'none' }} />
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
               <S.Input
