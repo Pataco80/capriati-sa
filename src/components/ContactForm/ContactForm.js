@@ -2,7 +2,6 @@ import React from 'react'
 
 // Import Components for App
 import { Title } from '@components'
-import useSiteMetadata from '@hooks/useSiteMetadata'
 
 // Import StyledElements for basic styles
 import { Section } from '../StyledElements/SectionStyled'
@@ -13,14 +12,18 @@ import * as S from './ContactFormStyled'
 
 // Component
 const Contactform = () => {
-  const { formSpree } = useSiteMetadata()
   // Render Component
   return (
     <Section>
       <Title tag='h3' title='Contactez-nous via notre formulaire' />
       <S.FormContainer padding='0'>
-        <S.ContactForm action={formSpree} method='POST' autocomplete='on'>
+        <S.ContactForm
+          action='https://formspree.io/f/xlenaazr'
+          method='POST'
+          autocomplete='on'
+        >
           <S.ContactInfo>
+            <input type='text' name='_gotcha' style='display:none' />
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
               <S.Input
@@ -35,7 +38,7 @@ const Contactform = () => {
               <S.Label htmlFor='email'>Email</S.Label>
               <S.Input
                 type='email'
-                name='email'
+                name='_replyto'
                 id='email'
                 placeholder='Saisissez votre adresse mail'
                 required
