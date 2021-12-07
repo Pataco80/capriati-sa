@@ -18,7 +18,7 @@ const Contactform = () => {
       <Title tag='h3' title='Contactez-nous via notre formulaire' />
       <S.FormContainer padding='0'>
         <S.ContactForm
-          action='https://formspree.io/f/xlenaazr'
+          action='https://formspree.io/f/xzbkneqk'
           method='POST'
           autocomplete='on'
         >
