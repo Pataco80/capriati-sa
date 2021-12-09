@@ -1,35 +1,37 @@
-import React from "react"
+import React from 'react'
 
 // Import Hooks
 
 // Import components from Gatsby and plugins Gatsby
 // Import Components for App
-import { Title } from "@components"
+import { Title } from '@components'
 
 // Import styles from styled-components file and helpers
-import * as S from "./ServiceItemStyled"
+import * as S from './ServiceItemStyled'
 
 // GraphQl Queries
 
 // Component
-const ServiceItemCard = ({ id, name, altIcon, icon, description }) => {
+const ServiceItemCard = (props) => {
   // Component Variables
+  const { id, name, altIcon, icon, description } = props
+  //console.log(props)
   // Component Functions
 
   // Render Component
   return (
-    <S.ServiceCardWrapper key={id}>
+    <S.ServiceCardWrapper key={id} to={`/services/#${id}`}>
       <S.ServiceCardItem>
         <S.serviceCardHeader>
-          <S.ServiceSmallBanner padding="0">
+          <S.ServiceSmallBanner padding='0'>
             <S.IconContainerCard>
               <S.ServiceIcon image={icon} alt={altIcon} />
             </S.IconContainerCard>
-            <Title tag="h3" title={name} noShadow notMargin />
+            <Title tag='h3' title={name} noShadow notMargin />
           </S.ServiceSmallBanner>
         </S.serviceCardHeader>
         <S.ServiceBody
-          padding="0"
+          padding='0'
           dangerouslySetInnerHTML={{ __html: `${description}` }}
         ></S.ServiceBody>
       </S.ServiceCardItem>

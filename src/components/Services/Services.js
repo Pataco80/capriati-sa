@@ -64,6 +64,7 @@ const Services = (props) => {
       <S.ServicesContent padding='0'>
         {servicesList.map((service, index) => {
           const {
+            serviceId,
             serviceName,
             serviceIcon,
             serviceFeatureImg,
@@ -77,6 +78,7 @@ const Services = (props) => {
 
           return home ? (
             <ServiceItemCard
+              id={serviceId}
               Key={index}
               icon={icon}
               name={serviceName}
@@ -87,6 +89,7 @@ const Services = (props) => {
           ) : (
             <ServiceItem
               Key={index}
+              id={serviceId}
               icon={icon}
               name={serviceName}
               altIcon={`${serviceName} icon`}

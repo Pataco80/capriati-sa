@@ -10,22 +10,25 @@ import { GalleryItem } from '@components'
 import * as S from './ServiceItemStyled'
 
 // Component
-const ServiceItem = ({
-  name,
-  altIcon,
-  altFeatured,
-  icon,
-  serviceFeatureImg,
-  description,
-  gallery,
-  home,
-}) => {
+const ServiceItem = (props) => {
   // Component Variables
+  const {
+    id,
+    name,
+    altIcon,
+    altFeatured,
+    icon,
+    serviceFeatureImg,
+    description,
+    gallery,
+    home,
+  } = props
   const featuredImgPath = getImage(serviceFeatureImg.localFiles[0])
+  console.log(props)
 
   // Render Component
   return (
-    <S.ServiceWrapper>
+    <S.ServiceWrapper id={id}>
       <S.ServiceHeader>
         <S.ServiceBcgImage
           imgPath={featuredImgPath}
@@ -53,7 +56,15 @@ const ServiceItem = ({
             const image = getImage(item.localFiles[0])
             const altImg = item.localFiles[0].name
             // Return Gallery Images
-            return <GalleryItem Key={index} image={image} alt={altImg} />
+            return (
+              <GalleryItem
+                serviceImage
+                Key={index}
+                image={image}
+                alt={altImg}
+                serviceImgGallery
+              />
+            )
           })}
         </S.GallerySection>
       )}

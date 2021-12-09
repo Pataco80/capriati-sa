@@ -19,6 +19,9 @@ const WrapperCSS = css`
   ${media.greaterThan('tablet')`
     width: 30%;
     `}
+  ${media.greaterThan('desktop')`
+    ${(props) => (props.serviceImgGallery ? `width:30%;` : `width:23%;`)}
+    `}
 `
 
 // Export Styles for the component
