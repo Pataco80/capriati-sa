@@ -4,7 +4,8 @@ import React from 'react'
 import * as S from './GalleryItemStyled'
 
 // Component
-const GalleryItem = ({ image, alt, toLightbox }) => {
+const GalleryItem = ({ image, alt, toLightbox, serviceImgGallery }) => {
+  console.log(serviceImgGallery)
   // Render Component if active Lightbox
   if (toLightbox) {
     return (
@@ -15,7 +16,7 @@ const GalleryItem = ({ image, alt, toLightbox }) => {
   } else {
     // Return sinmple image item
     return (
-      <S.ImgWrapper>
+      <S.ImgWrapper serviceImgGallery={serviceImgGallery}>
         <S.Image image={image} alt={alt} />
       </S.ImgWrapper>
     )

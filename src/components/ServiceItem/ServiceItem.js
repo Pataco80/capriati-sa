@@ -56,7 +56,15 @@ const ServiceItem = (props) => {
             const image = getImage(item.localFiles[0])
             const altImg = item.localFiles[0].name
             // Return Gallery Images
-            return <GalleryItem Key={index} image={image} alt={altImg} />
+            return (
+              <GalleryItem
+                serviceImage
+                Key={index}
+                image={image}
+                alt={altImg}
+                serviceImgGallery
+              />
+            )
           })}
         </S.GallerySection>
       )}

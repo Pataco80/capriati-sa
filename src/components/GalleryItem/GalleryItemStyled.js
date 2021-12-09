@@ -20,7 +20,7 @@ const WrapperCSS = css`
     width: 30%;
     `}
   ${media.greaterThan('desktop')`
-    width: 23%;
+    ${(props) => (props.serviceImgGallery ? `width:30%;` : `width:23%;`)}
     `}
 `
 
