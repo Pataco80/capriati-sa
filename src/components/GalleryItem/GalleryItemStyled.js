@@ -19,6 +19,9 @@ const WrapperCSS = css`
   ${media.greaterThan('tablet')`
     width: 30%;
     `}
+  ${media.greaterThan('desktop')`
+    width: 23%;
+    `}
 `
 
 // Export Styles for the component
