@@ -108,7 +108,8 @@ const websiteConfig = {
   webSiteConceptor: conceptorSiteInfo.conceptorBusiness,
 
   // Access API
-  formSpree: process.env.GATSBY_FORMSPREE_ID,
+  formSpreeID: process.env.GATSBY_FORMSPREE_ID,
+  formspreeCaptchaClientKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
 }
 
 // Validate

@@ -1,26 +1,26 @@
-import * as React from 'react'
+import * as React from "react"
 
 // Import React Hooks
-import useSiteMetadata from '@hooks/useSiteMetadata'
-import mapsSelector from '../utils/getGoogleMap'
+import useSiteMetadata from "@hooks/useSiteMetadata"
+import mapsSelector from "../utils/getGoogleMap"
 
 // Import components from Gatsby and plugins Gatsby
-import { getImage } from 'gatsby-plugin-image'
-import { graphql } from 'gatsby'
+import { getImage } from "gatsby-plugin-image"
+import { graphql, Script } from "gatsby"
 
 // Import Components for App
-import { Layout, Seo, Hero, Title, ContactForm } from '@components'
-import { PhoneAlt, Envelope } from '@styled-icons/fa-solid'
-import { Map } from '@styled-icons/boxicons-regular'
+import { Layout, Seo, Hero, Title, ContactForm } from "@components"
+import { PhoneAlt, Envelope } from "@styled-icons/fa-solid"
+import { Map } from "@styled-icons/boxicons-regular"
 
 // Import styled-components, styledElements and helpers
-import styled from 'styled-components'
+import styled from "styled-components"
 import {
   SectionContent,
   Section,
-} from '../components/StyledElements/SectionStyled'
-import { Button } from '../components/StyledElements/ButtonsStyled'
-import { setFlex, media, setColor, setPxToRem } from '@helpers'
+} from "../components/StyledElements/SectionStyled"
+import { Button } from "../components/StyledElements/ButtonsStyled"
+import { setFlex, media, setColor, setPxToRem } from "@helpers"
 
 // GraphQl Queries
 export const query = graphql`
@@ -51,11 +51,13 @@ const ContactPage = ({ data }) => {
     businessContry,
     businessPhone,
     businessEmail,
+    formSpreeID,
+    formSpreeCaptcha,
   } = useSiteMetadata()
 
   // Delete spaces for links
   const removeSpaces = (string) => {
-    return string.replace(/\s/g, '')
+    return string.replace(/\s/g, "")
   }
   const hrefPhone = `tel:${removeSpaces(businessPhone)}`
   const hrefEmail = `mailto:${businessEmail}`
@@ -63,6 +65,7 @@ const ContactPage = ({ data }) => {
   // Render Component
   return (
     <Layout background={`${setColor.mainGreyL3}`}>
+      <Script src='https://www.google.com/recaptcha/api.js' async defer />
       <Seo
         pathname='/contact/'
         title='Nous Contacter'
@@ -73,7 +76,7 @@ const ContactPage = ({ data }) => {
       />
       <Hero title='Nous Contacter' imgPath={bcgImage} altBcgImage={altImg} />
 
-      <ContactForm />
+      <ContactForm formID={formSpreeID} formCaptcha={formSpreeCaptcha} />
       <ContactSection background={`${setColor.mainGreyL3}`}>
         <Title tag='h3' title='Nos Coordonées' />
         <ContactSectionContent>
@@ -82,7 +85,7 @@ const ContactPage = ({ data }) => {
             <Title tag='h6' title={siteTitle} noShadow notMargin />
             <p>
               {businessRoad} {businessRoadNumber} <br />
-              {businessZipCode} {businessCity} <br /> {businessShortCanton} -{' '}
+              {businessZipCode} {businessCity} <br /> {businessShortCanton} -{" "}
               {businessContry}
             </p>
             <ButtonMap
@@ -98,13 +101,13 @@ const ContactPage = ({ data }) => {
           <ContactInfo>
             <Title tag='h5' title='Contact' notMargin />
             <p>
-              <PhoneAlt className='contactInfo-icon' /> :{' '}
+              <PhoneAlt className='contactInfo-icon' /> :{" "}
               <a href={hrefPhone} title='Appelez-nous'>
                 {businessPhone}
               </a>
             </p>
             <p>
-              <Envelope className='contactInfo-icon' /> :{' '}
+              <Envelope className='contactInfo-icon' /> :{" "}
               <a href={hrefEmail} title='Ecrivez-nous un mail'>
                 {businessEmail}
               </a>
@@ -118,21 +121,21 @@ const ContactPage = ({ data }) => {
 
 // Styles from styled-components
 const ContactSection = styled(Section)`
-  ${setFlex({ flDir: 'column' })};
+  ${setFlex({ flDir: "column" })};
 
-  ${media.greaterThan('smTablet')`
+  ${media.greaterThan("smTablet")`
     ${setFlex()};
   `}
 `
 
 const ContactSectionContent = styled(SectionContent)`
-  ${media.greaterThan('smTablet')`
-    ${setFlex({ y: 'flex-start' })};
+  ${media.greaterThan("smTablet")`
+    ${setFlex({ y: "flex-start" })};
   `}
 `
 
 const ContactInfo = styled.div`
-  ${setFlex({ flDir: 'column' })};
+  ${setFlex({ flDir: "column" })};
   width: 100%;
   text-align: center;
 
@@ -140,7 +143,7 @@ const ContactInfo = styled.div`
     margin-bottom: 4rem;
   }
 
-  ${media.greaterThan('smTablet')`
+  ${media.greaterThan("smTablet")`
     width: 50%;
 
     &:first-child {

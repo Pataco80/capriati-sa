@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react"
 
 // Import Components for App
-import { Title } from '@components'
+import { Title } from "@components"
 
 // Import StyledElements for basic styles
-import { Section } from '../StyledElements/SectionStyled'
-import { ButtonForm } from '../StyledElements/ButtonsStyled'
+import { Section } from "../StyledElements/SectionStyled"
+import { ButtonForm } from "../StyledElements/ButtonsStyled"
 
 // Import styles from styled-components file
-import * as S from './ContactFormStyled'
+import * as S from "./ContactFormStyled"
 
 // Component
-const Contactform = () => {
+const Contactform = ({ formID, formCaptcha, className }) => {
   // Render Component
   return (
     <Section>
@@ -23,7 +23,7 @@ const Contactform = () => {
           autocomplete='on'
         >
           <S.ContactInfo>
-            <input type='text' name='_gotcha' style={{ display: 'none' }} />
+            <input type='text' name='_gotcha' style={{ display: "none" }} />
             <S.InputWrapper>
               <S.Label htmlFor='name'>Nom</S.Label>
               <S.Input
@@ -73,6 +73,10 @@ const Contactform = () => {
               required
             />
           </S.ContactMessage>
+          <S.Captcha
+            className={`g-recaptcha ${className}`}
+            data-sitekey={formCaptcha}
+          ></S.Captcha>
           <ButtonForm
             primary
             type='submit'
