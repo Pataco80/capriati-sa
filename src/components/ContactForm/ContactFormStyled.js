@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 // Import StyledElements for basic styles
-import { SectionContent } from '../StyledElements/SectionStyled'
+import { SectionContent } from "../StyledElements/SectionStyled"
 
 // Import helpers
 import {
@@ -13,7 +13,7 @@ import {
   setColor,
   setShadow,
   setFont,
-} from '@helpers'
+} from "@helpers"
 
 // Styled CSS
 const ContactInput = css`
@@ -25,14 +25,14 @@ const ContactInput = css`
   ${setRadius({ allPx: 12 })};
   border: ${setBorder({
     size: 1,
-    style: 'solid',
+    style: "solid",
     color: setColor.primaryColor,
   })};
   background: ${setColor.mainGreyL3};
-  box-shadow: ${setShadow('light')};
+  box-shadow: ${setShadow("light")};
 
   &:focus {
-    box-shadow: ${setShadow('light', { inset: 'inset' })};
+    box-shadow: ${setShadow("light", { inset: "inset" })};
     outline: none;
   }
   &::placeholder {
@@ -43,19 +43,19 @@ const ContactInput = css`
 // Export Styles for the component
 export const FormContainer = styled(SectionContent)`
   ${layout({ mW: 800 })};
-  ${setFlex({ flDir: 'column' })};
+  ${setFlex({ flDir: "column" })};
 `
 
 export const ContactForm = styled.form`
-  ${setFlex({ flDir: 'column' })};
+  ${setFlex({ flDir: "column" })};
   width: 100%;
 `
 
 export const ContactInfo = styled.section`
   width: 100%;
 
-  ${media.greaterThan('smTablet')`
-    ${setFlex({ x: 'space-between' })};
+  ${media.greaterThan("smTablet")`
+    ${setFlex({ x: "space-between" })};
   `}
 `
 
@@ -66,7 +66,7 @@ export const ContactMessage = styled.section`
 export const InputWrapper = styled.div`
   width: 100%;
 
-  ${media.greaterThan('smTablet')`
+  ${media.greaterThan("smTablet")`
     width: 45%;
   `}
 `
@@ -83,4 +83,8 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   ${ContactInput}
   resize: none;
+`
+
+export const Captcha = styled.div`
+  margin-bottom: 3rem;
 `
