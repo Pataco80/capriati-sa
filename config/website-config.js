@@ -109,7 +109,7 @@ const websiteConfig = {
 
   // Access API
   formSpreeID: process.env.GATSBY_FORMSPREE_ID,
-  formspreeCaptchaClientKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+  formspreeCaptchaClientKey: "6LfP_14hAAAAAL6y38SP80hWh0gZAx3v1j4tk425",
 }
 
 // Validate
