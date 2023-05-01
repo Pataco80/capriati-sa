@@ -2,7 +2,8 @@ node_modules/
 .cache/
 public
 .vscode/
-.env.*
+.history/
+.env
 .DS_Store
 .variables
 components-en-attente/
