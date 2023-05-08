@@ -8,7 +8,7 @@ import socialLinks from "../constants/socialLinks"
 import { StaticImage } from "gatsby-plugin-image"
 
 // Import Components for App
-//import { MenuAlt3 } from '@styled-icons/heroicons-outline/MenuAlt3'
+import { MenuAlt3 } from "@styled-icons/heroicons-outline/MenuAlt3"
 
 // Import styled-components, styledElements and helpers
 import * as S from "./NavbarStyled"
@@ -37,7 +37,9 @@ const Navbar = ({ toScroll }) => {
 							alt='Logo Capriati SA'
 						/>
 					</S.LogoContainer>
-					<S.NavbarToggle onClick={toggleNav}></S.NavbarToggle>
+					<S.NavbarToggle onClick={toggleNav}>
+						<MenuAlt3 size='32' />
+					</S.NavbarToggle>
 				</S.NavbarHeader>
 				<S.NavbarNav className={isOpen ? `show-nav` : ``}>
 					{links.map((link, index) => {
