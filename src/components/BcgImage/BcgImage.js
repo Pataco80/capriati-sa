@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
 // Import Helpers
-import { setColor } from '@helpers'
+import { setColor } from "@helpers"
 
 // Import styles from component styled file
-import * as S from './BcgImageStyled'
+import * as S from "./BcgImageStyled"
 
 // Component
 const BcgImage = (props) => {
   // Component Variables
   const { imgPath, altBcgImage, children, error, notOverlay } = props
-  const textAltImg = altBcgImage.replace(/-/g, ' ')
+  const textAltImg = altBcgImage.replace(/-/g, " ")
 
   // Render Component
   return (
@@ -20,12 +20,11 @@ const BcgImage = (props) => {
       alt={textAltImg}
       backgroundColor={setColor.mainWhite}
       error={error}
-      className='coucou'
-    >
+      className='coucou'>
       {error ? (
         <S.BcgImageOverlay className={notOverlay ? `notOverlay` : ``} />
       ) : (
-        ''
+        ""
       )}
       {children}
     </S.BcgImageWrapper>
