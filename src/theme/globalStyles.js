@@ -1,10 +1,8 @@
 import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
 
 import { setColor, setFont, setLetterSpacing } from "./helpers"
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
 
   *, *:before, *:after {
     box-sizing: border-box;
