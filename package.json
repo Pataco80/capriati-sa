@@ -38,8 +38,6 @@
 		"gatsby-source-filesystem": "^4.20.0",
 		"gatsby-transformer-sharp": "^4.20.0",
 		"gbimage-bridge": "^0.2.2",
-		"i": "^0.3.7",
-		"npm": "^8.16.0",
 		"polished": "^4.2.2",
 		"react-helmet": "^6.1.0",
 		"react-parallax": "^3.5.1",
