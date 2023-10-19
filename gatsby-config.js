@@ -53,12 +53,12 @@ module.exports = {
 			options: {
 				// You can add multiple tracking ids and a pageview event will be fired for all of them.
 				trackingIds: [
-					process.env.GOOGLE_GTAG, // Google Analytics / GA
+					"G-JBPQMWXXWN", // Google Analytics / GA
 				],
 			},
 			pluginConfig: {
 				// Puts tracking script in the head instead of the body
-				head: false,
+				head: true,
 			},
 		},
 		// File System
