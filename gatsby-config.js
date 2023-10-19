@@ -56,10 +56,6 @@ module.exports = {
 					"G-JBPQMWXXWN", // Google Analytics / GA
 				],
 			},
-			pluginConfig: {
-				// Puts tracking script in the head instead of the body
-				head: true,
-			},
 		},
 		// File System
 		{
