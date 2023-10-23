@@ -48,7 +48,7 @@ module.exports = {
 
 	// Plugins Configuration
 	plugins: [
-		{
+		/*{
 			resolve: "gatsby-plugin-google-tagmanager",
 			options: {
 				id: "GTM-5PF6645R",
@@ -58,16 +58,16 @@ module.exports = {
 				// Defaults to false meaning GTM will only be loaded in production.
 				includeInDevelopment: false,
 			},
-		},
-		/*{
+		},*/
+		{
 			resolve: `gatsby-plugin-google-gtag`,
 			options: {
 				// You can add multiple tracking ids and a pageview event will be fired for all of them.
 				trackingIds: [
-					"G-JBPQMWXXWN", // Google Analytics / GA
+					"G-ZVMDSFXJLG", // Google Analytics / GA
 				],
 			},
-		},*/
+		},
 		// File System
 		{
 			resolve: `gatsby-source-filesystem`,
