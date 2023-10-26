@@ -49,5 +49,8 @@
 		"styled-icons": "^10.47.0",
 		"styled-media-query": "^2.1.2",
 		"styled-reset": "^4.5.1"
+	},
+	"devDependencies": {
+		"gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.31"
 	}
 }
