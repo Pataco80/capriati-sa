@@ -37,8 +37,12 @@ const Navbar = ({ toScroll }) => {
 							alt='Logo Capriati SA'
 						/>
 					</S.LogoContainer>
-					<S.NavbarToggle onClick={toggleNav} name='menu' type='button'>
-						<MenuAltRight size='32' />
+					<S.NavbarToggle
+						onClick={toggleNav}
+						type='button'
+						name='Ouvrir le menu'
+						aria-label='Ouvrir le menu'>
+						<MenuAltRight size='32' aria-pressed='mixed' />
 					</S.NavbarToggle>
 				</S.NavbarHeader>
 				<S.NavbarNav className={isOpen ? `show-nav` : ``}>
@@ -57,7 +61,7 @@ const Navbar = ({ toScroll }) => {
 						const { title, url, icon } = link
 						return (
 							<li>
-								<a key={index} href={url} title={title}>
+								<a key={index} href={url} title={title} rel='noopener'>
 									{icon}
 								</a>
 							</li>

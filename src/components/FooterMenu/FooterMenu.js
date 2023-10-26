@@ -24,7 +24,7 @@ const FooterMenu = () => {
 				{socialLinks.map((link, index) => {
 					return (
 						<li>
-							<a key={index} href={link.url}>
+							<a key={index} href={link.url} title={link.title} rel='noopener'>
 								{link.icon}
 							</a>
 						</li>
