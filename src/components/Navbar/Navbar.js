@@ -37,7 +37,7 @@ const Navbar = ({ toScroll }) => {
 							alt='Logo Capriati SA'
 						/>
 					</S.LogoContainer>
-					<S.NavbarToggle onClick={toggleNav}>
+					<S.NavbarToggle onClick={toggleNav} name='menu' type='button'>
 						<MenuAltRight size='32' />
 					</S.NavbarToggle>
 				</S.NavbarHeader>
@@ -56,9 +56,11 @@ const Navbar = ({ toScroll }) => {
 					{socialLinks.map((link, index) => {
 						const { title, url, icon } = link
 						return (
-							<a key={index} href={url} title={title}>
-								{icon}
-							</a>
+							<li>
+								<a key={index} href={url} title={title}>
+									{icon}
+								</a>
+							</li>
 						)
 					})}
 				</S.NavbarSocial>
