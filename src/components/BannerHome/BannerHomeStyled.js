@@ -1,86 +1,72 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 // Import StyledElements for basic styles
-import { BannerStyled } from '../StyledElements/BannerStyled'
-import { GatsbyButtonLink } from '../StyledElements/ButtonsStyled'
+import { BannerStyled } from "../StyledElements/BannerStyled"
+import { GatsbyButtonLink } from "../StyledElements/ButtonsStyled"
 
 // Import helpers
-import { layout, setFlex, media, setShadow } from '@helpers'
+import { layout, setFlex, media, setShadow, spaceScale } from "@helpers"
 
 // Export Styles for the component
 export const BannerWrapper = styled(BannerStyled)`
-  ${setFlex({ flDir: 'column' })};
-  align-self: stretch;
-  background-color: silver;
+	${setFlex({ flDir: "column" })};
+	align-self: stretch;
+	background-color: silver;
+	padding-bottom: ${spaceScale.space2xlUp3xl};
 
-  ${media.greaterThan('smTablet')`
-    ${setFlex({ flDir: 'column', x: 'flex-start', y: 'space-around' })};
-    flex-direction: column;
-  `}
+	${media.greaterThan("smTablet")`
+    ${setFlex({ flDir: "column", x: "flex-start", y: "space-around" })};
+    margin-bottom: ${spaceScale.space2xlUp3xl};
 
-  ${media.greaterThan('lgTablet')`
-    padding: 2rem 4rem;
-  `}
-
-  ${media.greaterThan('desktop')`
-    padding: 6rem;
   `}
 `
 
 export const LayoutSection = styled.div`
-  ${layout()};
-  ${setFlex({ flDir: 'column', x: 'center', y: 'center' })};
-  align-content: flex-end;
-  position: relative;
-  padding-bottom: 4rem;
-  width: 100%;
-  z-index: 2;
+	${layout()};
+	${setFlex({ flDir: "column", x: "center", y: "center" })};
+	align-content: flex-end;
+	position: relative;
+	width: 100%;
+	z-index: 2;
 
-  ${media.greaterThan('mobile')`
-    padding-bottom: 6rem;
-  `}
-
-  ${media.greaterThan('smTablet')`
-    ${setFlex({ x: 'space-around', y: 'space-around' })};
-    padding-bottom: 8rem;
+	${media.greaterThan("smTablet")`
+    ${setFlex({ x: "space-around", y: "space-around" })};
     align-self: flex-end;
   `}
 `
 
 export const CallActionBtn = styled(GatsbyButtonLink)`
-  box-shadow: ${setShadow('medium')};
-  text-align: center;
-  margin: 2rem 0.5rem 0 0.5rem;
+	box-shadow: ${setShadow("light")};
+	text-align: center;
+	margin: ${spaceScale.spaceSupM} ${spaceScale.spaceSupM} 0
+		${spaceScale.spaceSupM};
 
-  &:hover {
-    box-shadow: ${setShadow('dark')};
-  }
-
-  ${media.greaterThan('mobile')`
-    margin: 3rem 0.5rem 0 0.5rem;
-  `}
+	&:hover {
+		box-shadow: ${setShadow("medium")};
+	}
 `
 
 export const Description = styled.div`
-  ${setFlex({ x: 'flex-end', y: 'flex-end' })};
-  width: 100%;
-  margin-bottom: 1rem;
+	${setFlex({ y: "flex-end" })};
+	width: 100%;
+	margin-bottom: ${spaceScale.spaceXlUp2xl};
 
-  ${media.greaterThan('tablet')`
-    margin-bottom: 4rem;
+	${media.lessThan("smTablet")`
+    margin-bottom: ${spaceScale.spaceXs};
   `}
 `
 
 export const Text = styled.p`
-  text-align: right;
-  padding: 0 1rem;
-  text-shadow: ${setShadow('medium')};
+	text-align: center;
+	${media.lessThan("smTablet")`
+	margin-bottom: 0;
+  `}
 `
 
 export const LogoWrapper = styled.div`
-  ${setFlex({ x: 'flex-start' })};
-  align-self: flex-start;
-  width: 100%;
-  max-width: 500px;
-  z-index: 2;
+	${setFlex({ x: "flex-start" })};
+	width: 100%;
+	max-width: 500px;
+	z-index: 2;
+	align-content: flex-end;
 `

@@ -8,22 +8,22 @@ import Title from "../Title/Title"
 import * as S from "./BannerStyled"
 
 // Component
-const Banner = props => {
-  // Component Variables
-  const { title, children } = props
-  // Render Component
-  return (
-    <S.BannerWrapper>
-      <Title tag="h1" title={title} />
-      {children}
-    </S.BannerWrapper>
-  )
+const Banner = (props) => {
+	// Component Variables
+	const { title, children, notPadding } = props
+	// Render Component
+	return (
+		<S.BannerWrapper>
+			<Title tag='h1' title={title} notPadding={notPadding} />
+			{children}
+		</S.BannerWrapper>
+	)
 }
 
 export default Banner
 
 // React PropTypes and more...
 Banner.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node,
+	title: PropTypes.string,
+	children: PropTypes.node,
 }
