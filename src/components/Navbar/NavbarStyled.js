@@ -14,6 +14,7 @@ import {
 	setBorder,
 	setShadow,
 } from "../../theme/helpers"
+import { typeScale } from "../../theme/typography"
 
 // Export Styles for the component
 export const NavbarWrapper = styled.nav`
@@ -88,6 +89,8 @@ export const NavbarNav = styled.ul`
 `
 
 export const NavbarLinks = styled(Link)`
+	font-size: ${typeScale.fontSizeS};
+
 	${setFlex()};
 	opacity: 0;
 	padding: ${setPxToRem(16)} ${setPxToRem(8)};
@@ -127,7 +130,7 @@ export const NavbarSocial = styled.ul`
 	& li {
 		display: flex;
 
-		margin: 0 ${setPxToRem(8)};
+		margin-left: 1rem;
 
 		& a {
 			color: ${setColor.primaryColor};
@@ -158,6 +161,5 @@ export const NavbarSocial = styled.ul`
 `
 
 export const LogoContainer = styled(Link)`
-	width: 150px;
-	margin-left: ${setPxToRem(8)};
+	width: 200px;
 `
