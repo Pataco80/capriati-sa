@@ -183,14 +183,14 @@ export const setFlex = ({
 export const setGrid = ({
 	x = "space-evenly",
 	y = "space-evenly",
-	xgap = 0,
-	ygap = 0,
+	xgap = "0",
+	ygap = "0",
 } = {}) => {
 	return `display: grid;
-  justify-content: ${x};
-  align-content: ${y};
-  grid-row-gap: ${xgap}rem;
-  grid-column-gap: ${xgap}rem;
+  grid-template-row: ${x};
+  grid-template-columns: ${y};
+  row-gap: ${xgap};
+  column-gap: ${ygap};
   `
 }
 

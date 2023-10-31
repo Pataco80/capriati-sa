@@ -6,11 +6,13 @@ import * as S from "./TitleStyled"
 
 // Component
 const Title = (props) => {
-	const { title, tag: Tag, hidden, children, className } = props
+	const { title, tag: Tag, hidden, children, tagClassName, mBtm } = props
 	// Render Component
 	return (
-		<S.TitleWrapper hidden={hidden} className={className}>
-			<Tag>{title}</Tag>
+		<S.TitleWrapper>
+			<Tag className={tagClassName} mBtm={mBtm} hidden={hidden}>
+				{title}
+			</Tag>
 			{children}
 		</S.TitleWrapper>
 	)

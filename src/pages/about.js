@@ -54,7 +54,7 @@ const AboutPage = () => {
 				/>
 				<Banner title='A Propos de nous' notPadding />
 			</Hero>
-			<About />
+			<About about />
 			<History />
 			<ParallaxImg />
 			<Team />

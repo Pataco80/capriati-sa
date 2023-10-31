@@ -109,4 +109,8 @@ export const globalTypography = css`
 		font-size: ${typeScale.ftzXs};
 		line-height: ${typeScale.lineXs};
 	}
+
+	*.notMargin {
+		margin-bottom: 0 !important;
+	}
 `

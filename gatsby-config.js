@@ -89,6 +89,7 @@ module.exports = {
 						"src/components/styledElements"
 					),
 					"@helpers": path.resolve(__dirname, "src/theme/helpers"),
+					"@theme": path.resolve(__dirname, "src/theme/"),
 					"@hooks": path.resolve(__dirname, "src/hooks"),
 					"@utils": path.resolve(__dirname, "src/utils"),
 					"@constants": path.resolve(__dirname, "src/components/constants"),
