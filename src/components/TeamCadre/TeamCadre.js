@@ -1,31 +1,33 @@
-import React from 'react'
+import React from "react"
 
 // Import Components for App
-import { Profile } from '@components'
+import { Title } from "@components"
+import Avatar from "../Avatar/Avatar"
 
 // Import styles from styled-components file and helpers
-import * as S from './TeamCadreStyled'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import * as S from "./TeamCadreStyled"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // Component
 const TeamCadre = (props) => {
-  // Component Variables
-  const { teamPhoto, teamName, teamJob, teamActivity, teamJobDate } = props
-  const imagePath = getImage(teamPhoto.localFiles[0])
-  // Render Component
-  return (
-    <S.CadreItemWrapper>
-      <Profile tagName='h4' titleName={teamName} tagJob='h6' titleJob={teamJob}>
-        <GatsbyImage image={imagePath} alt={`Photo de ${teamName}`} />
-      </Profile>
-      <S.CadreInfo>
-        <S.InfoList
-          dangerouslySetInnerHTML={{ __html: `${teamActivity}` }}
-        ></S.InfoList>
-        <p>{teamJobDate}</p>
-      </S.CadreInfo>
-    </S.CadreItemWrapper>
-  )
+	// Component Variables
+	const { teamPhoto, teamName, teamJob, teamActivity, teamJobDate } = props
+	const imagePath = getImage(teamPhoto.localFiles[0])
+	// Render Component
+	return (
+		<S.CadreItemWrapper>
+			<Avatar>
+				<GatsbyImage image={imagePath} alt={`Photo de ${teamName}`} />
+			</Avatar>
+			<Title tag='h4' title={teamName} />
+			<Title tag='h6' title={teamJob} />
+			<S.CadreInfo>
+				<S.InfoList
+					dangerouslySetInnerHTML={{ __html: `${teamActivity}` }}></S.InfoList>
+				<p>{teamJobDate}</p>
+			</S.CadreInfo>
+		</S.CadreItemWrapper>
+	)
 }
 
 export default TeamCadre

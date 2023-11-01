@@ -58,7 +58,7 @@ export const spaceScale = {
 	spaceS: `clamp(1.13rem, calc(0.99rem + 0.65vw), 1.50rem)`,
 
 	/* Space m: 27px → 36px */
-	spaceM: `clamp(1.69rem, calc(1.49rem + 0.98vw), 2.25rem`,
+	spaceM: `clamp(1.69rem, calc(1.49rem + 0.98vw), 2.25rem)`,
 
 	/* Space l: 36px → 48px */
 	spaceL: `clamp(2.25rem, calc(1.99rem + 1.30vw), 3.00rem)`,
