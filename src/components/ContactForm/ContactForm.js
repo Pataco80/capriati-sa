@@ -22,7 +22,7 @@ const Contactform = ({ formID, formCaptcha, className }) => {
 		<Section>
 			<S.FormContainer padding='0'>
 				<S.ContactForm
-					action='https://formspree.io/f/xlenaazr'
+					action='https://formspree.io/f/xjvqzaol'
 					method='POST'
 					autocomplete='on'>
 					<S.ContactInfo>
