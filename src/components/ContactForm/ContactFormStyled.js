@@ -15,14 +15,15 @@ import {
 	setFont,
 	spaceScale,
 } from "@helpers"
+import { typeScale } from "../../theme/typography"
+import { setGrid } from "../../theme/helpers"
 
 // Styled CSS
 const ContactInput = css`
 	font-family: ${setFont.bodyFont};
-	font-size: 1rem;
+	font-size: ${typeScale.fontSizeS};
 	width: 100%;
-	padding: 1.5rem;
-	margin: 1rem 0 3rem;
+	padding: ${spaceScale.spaceS};
 	${setRadius({ allPx: 12 })};
 	border: ${setBorder({
 		size: 1,
@@ -30,10 +31,8 @@ const ContactInput = css`
 		color: setColor.primaryColor,
 	})};
 	background: ${setColor.mainGreyL3};
-	box-shadow: ${setShadow("light")};
 
 	&:focus {
-		box-shadow: ${setShadow("light", { inset: "inset" })};
 		outline: none;
 	}
 	&::placeholder {
@@ -44,43 +43,41 @@ const ContactInput = css`
 // Export Styles for the component
 export const FormContainer = styled(SectionContent)`
 	${layout({ mW: 800 })};
-	${setFlex({ flDir: "column" })};
 `
 
 export const ContactForm = styled.form`
-	${setFlex({ flDir: "column" })};
+	${setGrid({ xgap: `${spaceScale.spaceL}` })};
 	width: 100%;
 `
 
-export const ContactInfo = styled.section`
-	width: 100%;
-
+export const InputsContent = styled.section`
+	${setGrid({ y: "1fr", xgap: `${spaceScale.spaceL}` })};
+	justify-items: center;
+	align-items: start;
 	${media.greaterThan("smTablet")`
-    ${setFlex({ x: "space-between" })};
-  `}
+	${setGrid({ y: "1fr 1fr", ygap: `${spaceScale.spaceL}` })};
 
-	h6 {
-		width: 100%;
-		margin-bottom: ${spaceScale.space2xs};
-	}
+  `}
 `
 
 export const ContactMessage = styled.section`
 	width: 100%;
-	margin-top: ${spaceScale.spaceM};
 `
 
 export const InputWrapper = styled.div`
+	${setGrid({ xgap: `${spaceScale.spaceS}` })}
+	display: grid;
 	width: 100%;
 
 	${media.greaterThan("smTablet")`
-    width: 45%;
-
-		&.radio-input {
-			    width: 100%;
-
+		&.radio-input,
+		&.message {
+			grid-column: 1/3;
 		}
-  `}
+		&.radio-input{
+			grid-row-gap:${spaceScale.space2xs};
+		}
+	`}
 `
 
 export const Label = styled.label`
@@ -88,8 +85,14 @@ export const Label = styled.label`
 	color: ${setColor.primaryColor};
 
 	&.radio-input-label {
-		margin-left: 0.25rem;
+		display: block;
 	}
+`
+
+export const subjectLabel = styled.p`
+	color: ${setColor.primaryColor};
+	font-weight: bold;
+	margin-bottom: 0;
 `
 
 export const Input = styled.input`
@@ -102,13 +105,18 @@ export const TextArea = styled.textarea`
 `
 
 export const Captcha = styled.div`
-	margin-bottom: 3rem;
+	display: inline-grid;
+	justify-content: center;
+	width: 100%;
 `
 
 export const RadioInput = styled.input`
-	margin-left: 1rem;
+	margin-right: 1rem;
+`
 
-	&.first {
-		margin-left: 0;
-	}
+export const SelectInput = styled.select`
+	${ContactInput}
+	appearance: none;
+	font-style: italic;
+	color: #757575;
 `
