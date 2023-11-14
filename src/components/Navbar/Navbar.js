@@ -3,7 +3,8 @@ import React, { useState } from "react"
 // Import constans and datas
 import links from "../constants/links"
 import socialLinks from "../constants/socialLinks"
-
+import useDeviceDetect from "@hooks/useDeviceDetect"
+import useWindowSize from "@hooks/useWindowSize"
 // Import components from Gatsby and plugins Gatsby
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -12,15 +13,18 @@ import { MenuAltRight } from "@styled-icons/boxicons-regular/MenuAltRight"
 
 // Import styled-components, styledElements and helpers
 import * as S from "./NavbarStyled"
+import { breakpoints } from "../../theme/helpers"
 
 // Component
 const Navbar = ({ toScroll }) => {
 	// Component Variables
 	const [isOpen, setNav] = useState(false)
-
+	const { windowSize } = useWindowSize()
 	// Component Functions
 	const toggleNav = () => {
-		setNav((isOpen) => !isOpen)
+		if (windowSize < breakpoints.lgTablet) {
+			setNav((isOpen) => !isOpen)
+		}
 	}
 
 	// Render Compoent
@@ -49,7 +53,7 @@ const Navbar = ({ toScroll }) => {
 					{links.map((link, index) => {
 						return (
 							<li>
-								<S.NavbarLinks Key={index} to={link.path}>
+								<S.NavbarLinks Key={index} to={link.path} onClick={toggleNav}>
 									<span>{link.label}</span>
 								</S.NavbarLinks>
 							</li>
