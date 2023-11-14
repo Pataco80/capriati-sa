@@ -20,7 +20,6 @@ const ArticleCSS = css`
 export const AboutWrapper = styled(Section)`
 	${setFlex({ flDir: "column" })};
 	background-color: ${(props) => props.background || `${setColor.white}`};
-	padding: ${spaceScale.spaceXl};
 `
 
 export const AboutContent = styled(SectionContent)`

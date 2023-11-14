@@ -8,6 +8,7 @@ import { GalleryItem } from "@components"
 
 // Import styles from styled-components file and helpers
 import * as S from "./ServiceItemStyled"
+import { setColor } from "@helpers"
 
 // Component
 const ServiceItem = (props) => {
@@ -47,6 +48,19 @@ const ServiceItem = (props) => {
 					dangerouslySetInnerHTML={{
 						__html: `${description}`,
 					}}></S.ServiceBody>
+				{home ? (
+					<S.ServicesLink
+						primary='true'
+						to={`/services/#${id}`}
+						title='Aller à la page Nos Services'
+						fade
+						duration={1}
+						hex={setColor.mainWhite}>
+						Voir le service
+					</S.ServicesLink>
+				) : (
+					""
+				)}
 			</S.ServiceContent>
 		</S.ServiceWrapper>
 	)

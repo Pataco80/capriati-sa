@@ -18,6 +18,7 @@ import styled from "styled-components"
 import {
 	SectionContent,
 	Section,
+	MainContent,
 } from "../components/StyledElements/SectionStyled"
 import { Button } from "../components/StyledElements/ButtonsStyled"
 import { setFlex, media, setColor, setPxToRem } from "@helpers"
@@ -62,7 +63,7 @@ const ContactPage = () => {
 
 	// Render Component
 	return (
-		<Layout background={`${setColor.mainGreyL3}`}>
+		<>
 			<Script src='https://www.google.com/recaptcha/api.js' async defer />
 			<Seo
 				pathname='/contact/'
@@ -81,45 +82,47 @@ const ContactPage = () => {
 				/>
 				<Banner title='Nous Contacter' notPadding />
 			</Hero>
-			<ContactForm formID={formSpreeID} formCaptcha={formSpreeCaptcha} />
-			<ContactSection background={`${setColor.mainGreyL3}`}>
-				<Title tag='h3' title='Nos Coordonées' />
-				<ContactSectionContent>
-					<ContactInfo>
-						<Title tag='h5' title='Adresse' notMargin />
-						<Title tag='h6' title={siteTitle} noShadow notMargin />
-						<p>
-							{businessRoad} {businessRoadNumber} <br />
-							{businessZipCode} {businessCity} <br /> {businessShortCanton} -{" "}
-							{businessContry}
-						</p>
-						<ButtonMap
-							type='button'
-							primary
-							onClick={mapsSelector}
-							title='Nous Trouver'>
-							<MapIcon />
-							Nous trouver
-						</ButtonMap>
-					</ContactInfo>
-					<ContactInfo>
-						<Title tag='h5' title='Contact' notMargin />
-						<p>
-							<PhoneAlt className='contactInfo-icon' /> :{" "}
-							<a href={hrefPhone} title='Appelez-nous'>
-								{businessPhone}
-							</a>
-						</p>
-						<p>
-							<Envelope className='contactInfo-icon' /> :{" "}
-							<a href={hrefEmail} title='Ecrivez-nous un mail'>
-								{businessEmail}
-							</a>
-						</p>
-					</ContactInfo>
-				</ContactSectionContent>
-			</ContactSection>
-		</Layout>
+			<MainContent background={`${setColor.mainGreyL3}`}>
+				<ContactForm formID={formSpreeID} formCaptcha={formSpreeCaptcha} />
+				<ContactSection background={`${setColor.mainGreyL3}`}>
+					<Title tag='h3' title='Nos Coordonées' />
+					<ContactSectionContent>
+						<ContactInfo>
+							<Title tag='h5' title='Adresse' notMargin />
+							<Title tag='h6' title={siteTitle} noShadow notMargin />
+							<p>
+								{businessRoad} {businessRoadNumber} <br />
+								{businessZipCode} {businessCity} <br /> {businessShortCanton} -{" "}
+								{businessContry}
+							</p>
+							<ButtonMap
+								type='button'
+								primary
+								onClick={mapsSelector}
+								title='Nous Trouver'>
+								<MapIcon />
+								Nous trouver
+							</ButtonMap>
+						</ContactInfo>
+						<ContactInfo>
+							<Title tag='h5' title='Contact' notMargin />
+							<p>
+								<PhoneAlt className='contactInfo-icon' /> :{" "}
+								<a href={hrefPhone} title='Appelez-nous'>
+									{businessPhone}
+								</a>
+							</p>
+							<p>
+								<Envelope className='contactInfo-icon' /> :{" "}
+								<a href={hrefEmail} title='Ecrivez-nous un mail'>
+									{businessEmail}
+								</a>
+							</p>
+						</ContactInfo>
+					</ContactSectionContent>
+				</ContactSection>
+			</MainContent>
+		</>
 	)
 }
 
@@ -128,7 +131,7 @@ const ContactSection = styled(Section)`
 	${setFlex({ flDir: "column" })};
 
 	${media.greaterThan("smTablet")`
-    ${setFlex()};
+	${setFlex()};
   `}
 `
 

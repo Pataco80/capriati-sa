@@ -2,7 +2,8 @@ import * as React from "react"
 // Import React Hooks
 import { StaticImage } from "gatsby-plugin-image"
 // Import Components for App
-import { Layout, Seo, Hero, References, Works, Banner } from "@components"
+import { Title, Seo, Hero, References, Works, Banner } from "@components"
+import { MainContent } from "../components/StyledElements/SectionStyled"
 
 // Component
 const WorksPage = () => {
@@ -10,7 +11,7 @@ const WorksPage = () => {
 
 	// Render Component
 	return (
-		<Layout>
+		<>
 			<Seo
 				pathname='/works/'
 				title='Nos Travaux'
@@ -26,11 +27,13 @@ const WorksPage = () => {
 					placeholder='blurred'
 					layout='fullWidth'
 				/>
-				<Banner title='Nos Travaux' notPadding />
+				<Title title='Nos Travaux' tagClassName='page-title' />
 			</Hero>
-			<Works />
-			<References />
-		</Layout>
+			<MainContent>
+				<Works />
+				<References />
+			</MainContent>
+		</>
 	)
 }
 

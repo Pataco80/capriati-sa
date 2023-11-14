@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 // Import helpers
 import { setFlex } from "@helpers"
+import { spaceScale } from "../../theme/helpers"
 
 // Export Styles for the component
 export const HeroWrapper = styled.header`
@@ -12,7 +13,6 @@ export const HeroWrapper = styled.header`
 	width: 100vw;
 	overflow: hidden;
 	padding-bottom: ${(props) => (props.error ? "10rem" : 0)};
-
 	div {
 		display: flex;
 		flex: auto;

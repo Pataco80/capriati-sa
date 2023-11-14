@@ -13,12 +13,14 @@ import {
 	History,
 	ParallaxImg,
 	Team,
+	Title,
 	Parteners,
 } from "@components"
 // Import components from Gatsby and plugins Gatsby
 import { StaticImage } from "gatsby-plugin-image"
 // Import styled-components, styledElements and helpers
 import { setColor } from "@helpers"
+import { MainContent } from "../components/StyledElements/SectionStyled"
 
 // Component
 const AboutPage = () => {
@@ -27,7 +29,7 @@ const AboutPage = () => {
 
 	// Render Component
 	return (
-		<Layout background={`${setColor.mainWhite}`}>
+		<>
 			<Seo
 				pathname='/about/'
 				title='A Propos de Nous'
@@ -52,14 +54,16 @@ const AboutPage = () => {
 					placeholder='blurred'
 					layout='fullWidth'
 				/>
-				<Banner title='A Propos de nous' notPadding />
+				<Title tag='h1' title='A Propos de nous' tagClassName='page-title' />
 			</Hero>
-			<About about />
-			<History />
-			<ParallaxImg />
-			<Team />
-			<Parteners />
-		</Layout>
+			<MainContent background={`${setColor.mainWhite}`}>
+				<About about />
+				<History />
+				<ParallaxImg />
+				<Team />
+				<Parteners />
+			</MainContent>
+		</>
 	)
 }
 

@@ -3,16 +3,16 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 // Import Components for App
-import { Layout, Seo, Hero, Services, Banner } from "@components"
+import { Title, Seo, Hero, Services, Banner } from "@components"
 
 // Import styled-components, styledElements and helpers
 import { setColor } from "@helpers"
-
+import { MainContent } from "../components/StyledElements/SectionStyled"
 // Component
 const ServicesPage = () => {
 	// Render Component
 	return (
-		<Layout background={`${setColor.mainWhite}`}>
+		<>
 			<Seo
 				pathname='/services/'
 				title='Nos Services'
@@ -28,10 +28,12 @@ const ServicesPage = () => {
 					placeholder='blurred'
 					layout='fullWidth'
 				/>
-				<Banner title='Nos Services' notPadding />
+				<Title tag='h1' title='Nos Services' tagClassName='page-title' />
 			</Hero>
-			<Services />
-		</Layout>
+			<MainContent background={`${setColor.mainWhite}`}>
+				<Services />
+			</MainContent>
+		</>
 	)
 }
 

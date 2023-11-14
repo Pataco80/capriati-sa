@@ -10,6 +10,7 @@ import { BcgImage } from "@components"
 // Import StyledElements for basic styles
 import { BannerStyled } from "../StyledElements/BannerStyled"
 import { SectionContentCenter } from "../StyledElements/SectionStyled"
+import { GatsbyButtonLink } from "../StyledElements/ButtonsStyled"
 
 // Import helpers
 import {
@@ -26,15 +27,17 @@ export const ServiceWrapper = styled.article`
 	${setFlex({ flDir: "column" })};
 	width: 100%;
 	position: relative;
-	margin-bottom: ${spaceScale.spaceXl};
+	margin-bottom: ${spaceScale.space2xl};
 
 	${media.greaterThan("desktop")`
-	${setFlex({ flDir: "row", wrap: "nowrap" })};
-  margin-bottom:${spaceScale.spaceXl};
-	&.is-revert {
-		${setFlex({ flDir: "row-reverse", wrap: "nowrap" })};
+		${setFlex({ flDir: "row", wrap: "nowrap" })};
+		&.is-revert {
+			${setFlex({ flDir: "row-reverse", wrap: "nowrap" })};
+		}
+  `}
+	&:last-child {
+		margin-bottom: 0;
 	}
-    `}
 `
 
 export const ServiceHeader = styled.header`
@@ -111,4 +114,9 @@ export const ServiceContent = styled.div`
 	margin: 0 ${spaceScale.spaceM} 0 0;
 	}
   `}
+`
+export const ServicesLink = styled(GatsbyButtonLink)`
+	${media.greaterThan("desktop")`
+	align-self: flex-start;
+	`}
 `

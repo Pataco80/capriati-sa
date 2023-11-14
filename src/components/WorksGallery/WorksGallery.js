@@ -37,6 +37,7 @@ const WorksGallery = () => {
 	// Component variables
 	const data = useStaticQuery(getDatas)
 	const galleryDatas = data.galleryQuery.nodes
+	console.log(`WorksGallery pass ${galleryDatas}`)
 
 	// Render component
 	return (

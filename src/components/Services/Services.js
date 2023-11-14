@@ -75,23 +75,11 @@ const Services = (props) => {
 							altFeatured={`${serviceName} featured Image`}
 							description={`${serviceDescriptions}`}
 							isRevert={index % 2}
+							home={home}
 						/>
 					)
 				})}
 			</S.ServicesContent>
-			{home ? (
-				<S.ServicesLink
-					primary='true'
-					to='/services/'
-					title='Aller à la page Nos Services'
-					fade
-					duration={1}
-					hex={setColor.mainWhite}>
-					Nos Services
-				</S.ServicesLink>
-			) : (
-				""
-			)}
 		</S.ServicesWrapper>
 	)
 }
