@@ -21,7 +21,6 @@ import {
 // Export Styles for the component
 export const ServicesWrapper = styled(Section)`
 	${setFlex({ flDir: "column" })};
-	padding: ${spaceScale.spaceXl};
 	background-color: ${(props) => props.background || `${setColor.white}`};
 `
 
