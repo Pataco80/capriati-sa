@@ -173,14 +173,20 @@ module.exports = {
 
 		// Fonts Configuration
 		{
-			resolve: `gatsby-plugin-google-fonts`,
+			resolve: `gatsby-omni-font-loader`,
 			options: {
-				fonts: [
-					`Noto Sans\:400,400i,700:latin`,
-					`Roboto\:400,400i,700,700i:latin`,
-					// you can also specify font weights and styles
+				enableListener: true,
+				preconnect: [`https://fonts.googleapis.com`],
+				web: [
+					{
+						name: `Noto Sans`,
+						file: `https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap`,
+					},
+					{
+						name: `Roboto`,
+						file: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap`,
+					},
 				],
-				display: "swap",
 			},
 		},
 

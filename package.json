@@ -23,6 +23,7 @@
 		"babel-plugin-styled-components": "^2.1.4",
 		"dotenv": "^16.3.1",
 		"gatsby": "^4.25.7",
+		"gatsby-omni-font-loader": "^2.0.2",
 		"gatsby-plugin-alias-imports": "^1.0.5",
 		"gatsby-plugin-google-fonts": "^1.0.1",
 		"gatsby-plugin-google-gtag": "^4.18.0",
