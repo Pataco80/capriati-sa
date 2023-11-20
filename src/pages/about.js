@@ -53,6 +53,7 @@ const AboutPage = () => {
 					alt='Bannière A Propos'
 					placeholder='blurred'
 					layout='fullWidth'
+					loading='eager'
 				/>
 				<Title tag='h1' title='A Propos de nous' tagClassName='page-title' />
 			</Hero>

@@ -26,6 +26,7 @@ const WorksPage = () => {
 					alt='Bannière A Propos'
 					placeholder='blurred'
 					layout='fullWidth'
+					loading='eager'
 				/>
 				<Title title='Nos Travaux' tagClassName='page-title' />
 			</Hero>

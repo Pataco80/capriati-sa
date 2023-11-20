@@ -26,6 +26,7 @@ const NotFoundPage = () => {
 					placeholder='blurred'
 					layout='fullWidth'
 					className='hero-full-image'
+					loading='eager'
 				/>
 				<Text className='h3'>
 					La page que vous demandez n'éxiste pas, ou l'url que vous avez taper

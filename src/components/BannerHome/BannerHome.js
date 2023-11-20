@@ -28,6 +28,7 @@ const Bannerhome = () => {
 					alt={`Logo ${siteTitle}`}
 					layout='fullWidth'
 					placeholder='blurred'
+					loading='eager'
 				/>
 			</S.LogoWrapper>
 			<S.LayoutSection>

@@ -43,6 +43,7 @@ const Navbar = ({ toScroll }) => {
 							height={48}
 							placeholder='blurred'
 							layout='fixed'
+							loading='eager'
 						/>
 					</S.LogoContainer>
 					<S.NavbarToggle

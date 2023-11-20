@@ -27,6 +27,7 @@ const ServicesPage = () => {
 					alt='Bannière A Propos'
 					placeholder='blurred'
 					layout='fullWidth'
+					loading='eager'
 				/>
 				<Title tag='h1' title='Nos Services' tagClassName='page-title' />
 			</Hero>

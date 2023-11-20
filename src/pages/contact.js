@@ -79,6 +79,7 @@ const ContactPage = () => {
 					alt='Bannière A Propos'
 					placeholder='blurred'
 					layout='fullWidth'
+					loading='eager'
 				/>
 				<Banner title='Nous Contacter' notPadding />
 			</Hero>
