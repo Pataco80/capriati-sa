@@ -37,8 +37,12 @@ const Navbar = ({ toScroll }) => {
 				<S.NavbarHeader>
 					<S.LogoContainer to='/' title="Retour à la page d'Accueil">
 						<StaticImage
-							src='../../assets/images/logos/logoCapriatiTopbar.webp'
+							src='../../assets/images/logos/logoCapriatiTopbar.svg'
 							alt='Logo Capriati SA'
+							width={200}
+							height={48}
+							placeholder='blurred'
+							layout='fixed'
 						/>
 					</S.LogoContainer>
 					<S.NavbarToggle

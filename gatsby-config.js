@@ -159,17 +159,19 @@ module.exports = {
 		},
 
 		// Image Configuration
-		`gatsby-plugin-image`,
 		{
 			resolve: `gatsby-plugin-sharp`,
 			options: {
 				defaults: {
+					breakpoints: [240, 576, 768, 992, 1200],
 					formats: [`auto`, `webp`],
 					placeholder: `blurred`,
+					fit: "cover",
 				},
 			},
 		},
 		`gatsby-transformer-sharp`,
+		`gatsby-plugin-image`,
 
 		// Fonts Configuration
 		{
@@ -181,10 +183,6 @@ module.exports = {
 					{
 						name: `Noto Sans`,
 						file: `https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap`,
-					},
-					{
-						name: `Roboto`,
-						file: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap`,
 					},
 				],
 			},

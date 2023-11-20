@@ -27,6 +27,7 @@ const Bannerhome = () => {
 					src='../../assets/images/logos/logoCapriati.png'
 					alt={`Logo ${siteTitle}`}
 					layout='fullWidth'
+					placeholder='blurred'
 				/>
 			</S.LogoWrapper>
 			<S.LayoutSection>
