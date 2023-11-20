@@ -166,7 +166,7 @@ module.exports = {
 					breakpoints: [240, 576, 768, 992, 1200],
 					formats: [`auto`, `webp`],
 					placeholder: `blurred`,
-					fit: "cover",
+					transformOptions: { fit: "cover" },
 				},
 			},
 		},
