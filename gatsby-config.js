@@ -184,6 +184,10 @@ module.exports = {
 						name: `Noto Sans`,
 						file: `https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap`,
 					},
+					{
+						name: `Roboto`,
+						file: `https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap`,
+					},
 				],
 			},
 		},
