@@ -27,8 +27,7 @@ const About = (props) => {
       <S.AboutContent>
         <S.AboutArticle>
           <p>
-            Bienvenue chez Capriati S.A, entreprise familiale spécialisée dans
-            les travaux d’entretien et de rénovation depuis plus de 40 ans.
+            Bienvenue chez Capriati SA, entreprise familiale spécialisée dans les travaux d’entretien et de rénovation depuis plus de 45 ans.
           </p>
           <p>
             Bénéficiant d’une solide expérience afin de satisfaire à vos
